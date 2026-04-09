@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import { FIRM } from '../data/firm'
+import { FIRM, PRACTICE_AREAS } from '../data/firm'
 
-// Swap with your real Formspree endpoint (or any form-to-email service).
-// Until set, the form falls back to opening the user's mail client.
 const FORM_ENDPOINT = import.meta.env.VITE_FORM_ENDPOINT || ''
 
+const REFERRAL_SOURCES = [
+  'Search Engine','Google Ads','Facebook','Instagram','Other Social Media',
+  'Email','Newspaper','Word of Mouth','Other',
+]
+
 export default function ContactForm({ subject = '', compact = false }) {
-  const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const [status, setStatus] = useState('idle')
   const [error, setError] = useState('')
 
   async function handleSubmit(e) {
@@ -14,22 +17,32 @@ export default function ContactForm({ subject = '', compact = false }) {
     setError('')
     const form = e.currentTarget
     const data = new FormData(form)
+    if (data.get('company')) return // honeypot
 
-    // Honeypot
-    if (data.get('company')) return
+    if (!data.get('agree')) {
+      setError('Please acknowledge the disclaimer to continue.')
+      return
+    }
 
     const payload = {
-      name: data.get('name'),
+      firstName: data.get('firstName'),
+      lastName: data.get('lastName'),
       email: data.get('email'),
       phone: data.get('phone'),
-      subject: subject || data.get('subject') || 'Website Inquiry',
+      service: subject || data.get('service') || 'General Inquiry',
       message: data.get('message'),
+      referral: data.get('referral'),
     }
 
     if (!FORM_ENDPOINT) {
-      // Mailto fallback
-      const body = `Name: ${payload.name}\nEmail: ${payload.email}\nPhone: ${payload.phone}\n\n${payload.message}`
-      window.location.href = `mailto:${FIRM.email}?subject=${encodeURIComponent(payload.subject)}&body=${encodeURIComponent(body)}`
+      const body = `Name: ${payload.firstName} ${payload.lastName}
+Email: ${payload.email}
+Phone: ${payload.phone}
+Inquiring About: ${payload.service}
+Heard About Us: ${payload.referral || '—'}
+
+${payload.message}`
+      window.location.href = `mailto:${FIRM.email}?subject=${encodeURIComponent('Website Inquiry — ' + payload.service)}&body=${encodeURIComponent(body)}`
       setStatus('sent')
       return
     }
@@ -41,7 +54,7 @@ export default function ContactForm({ subject = '', compact = false }) {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(payload),
       })
-      if (!res.ok) throw new Error('Submission failed')
+      if (!res.ok) throw new Error('failed')
       setStatus('sent')
       form.reset()
     } catch (err) {
@@ -68,36 +81,71 @@ export default function ContactForm({ subject = '', compact = false }) {
 
       <div className="form-row">
         <div className="form-field">
-          <label>Name</label>
-          <input type="text" name="name" required />
+          <label>First Name *</label>
+          <input type="text" name="firstName" required />
         </div>
         <div className="form-field">
-          <label>Email</label>
-          <input type="email" name="email" required />
+          <label>Last Name *</label>
+          <input type="text" name="lastName" required />
         </div>
       </div>
+
       <div className="form-row">
         <div className="form-field">
-          <label>Phone</label>
-          <input type="tel" name="phone" />
+          <label>Email *</label>
+          <input type="email" name="email" required />
         </div>
-        {!subject && (
-          <div className="form-field">
-            <label>Matter</label>
-            <input type="text" name="subject" placeholder="e.g. Personal Injury" />
-          </div>
-        )}
+        <div className="form-field">
+          <label>Phone *</label>
+          <input type="tel" name="phone" required />
+        </div>
       </div>
+
+      {!subject && (
+        <div className="form-field">
+          <label>Inquiring About</label>
+          <select name="service" defaultValue="">
+            <option value="" disabled>Choose a service…</option>
+            {PRACTICE_AREAS.map(p => (
+              <option key={p.slug} value={p.name}>{p.name}</option>
+            ))}
+            <option value="General Inquiry">General Inquiry</option>
+          </select>
+        </div>
+      )}
+
       <div className="form-field">
-        <label>How can we help?</label>
+        <label>Description of Legal Matter *</label>
         <textarea name="message" rows={compact ? 4 : 6} required></textarea>
       </div>
+
+      <div className="form-field">
+        <label>How Did You Hear About Us?</label>
+        <div className="form-checks">
+          {REFERRAL_SOURCES.map(src => (
+            <label key={src} className="form-check">
+              <input type="radio" name="referral" value={src} />
+              <span>{src}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <label className="form-check form-agree">
+        <input type="checkbox" name="agree" required />
+        <span>
+          I have read and agree to the disclaimer below. The information I provide is not confidential and submitting this form does not create an attorney-client relationship.
+        </span>
+      </label>
+
       {error && <div className="form-error">{error}</div>}
+
       <button type="submit" className="form-submit" disabled={status === 'sending'}>
         {status === 'sending' ? 'Sending…' : 'Send Inquiry ↗'}
       </button>
+
       <div className="form-disclaimer">
-        Submitting this form does not create an attorney-client relationship. Please do not include confidential information.
+        The information you obtain at this site is not, nor is it intended to be, legal advice. You should consult an attorney for advice regarding your individual situation. Contacting us does not create an attorney-client relationship. Please do not send any confidential information until such a relationship has been established.
       </div>
     </form>
   )
