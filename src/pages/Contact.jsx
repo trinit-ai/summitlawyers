@@ -1,10 +1,12 @@
 import { Breadcrumb } from '../components/Layout'
 import ContactForm from '../components/ContactForm'
+import SEO from '../components/SEO'
 import { FIRM } from '../data/firm'
 
 export default function Contact() {
   return (
     <>
+      <SEO path="/contact" title="Contact" description="Schedule a free consultation. Ventura, Miesowitz & Keough, P.C., 783 Springfield Avenue, Summit, NJ. Call 908.277.2410." />
       <Breadcrumb trail={[{ to: '/', label: 'Home' }, { label: 'Contact' }]} />
       <div className="office-hero">
         <img src="/office.webp" alt="Ventura, Miesowitz & Keough, P.C. — 783 Springfield Avenue, Summit, NJ" />

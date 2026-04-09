@@ -1,6 +1,8 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { Breadcrumb } from '../components/Layout'
 import ClosingCard from '../components/ClosingCard'
+import SEO from '../components/SEO'
+import ContactForm from '../components/ContactForm'
 import { FIRM, ATTORNEYS, getAttorney, getPracticeArea } from '../data/firm'
 
 export default function AttorneyDetail() {
@@ -13,6 +15,11 @@ export default function AttorneyDetail() {
 
   return (
     <>
+      <SEO
+        path={`/attorneys/${attorney.slug}`}
+        title={attorney.name}
+        description={`${attorney.name}, ${attorney.position || attorney.role} at ${'Ventura, Miesowitz & Keough, P.C.'} in Summit, NJ. ${attorney.bio?.[0]?.slice(0, 140) || ''}`}
+      />
       <Breadcrumb trail={[
         { to: '/', label: 'Home' },
         { to: '/attorneys', label: attorney.tier === 'partner' ? 'Partners' : 'Attorneys & Counsel' },
@@ -100,6 +107,13 @@ export default function AttorneyDetail() {
               </div>
             </div>
           )}
+
+          <div className="sidebar-block">
+            <div className="sidebar-label">Send a Message</div>
+            <div className="sidebar-form">
+              <ContactForm compact subject={`Inquiry for ${attorney.name}`} />
+            </div>
+          </div>
 
           <div className="sidebar-block">
             <div className="sidebar-label">Office Hours</div>

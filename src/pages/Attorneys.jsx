@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Breadcrumb } from '../components/Layout'
+import SEO from '../components/SEO'
 import { ATTORNEYS, FIRM } from '../data/firm'
 
 export default function Attorneys() {
@@ -8,6 +9,7 @@ export default function Attorneys() {
 
   return (
     <>
+      <SEO path="/attorneys" title="Our Attorneys" description="Meet the attorneys of Ventura, Miesowitz & Keough, P.C. — partners and counsel serving Summit, NJ and the surrounding region since 1981." />
       <Breadcrumb trail={[{ to: '/', label: 'Home' }, { label: 'Attorneys' }]} />
       <section className="attorneys" style={{ paddingTop: 68 }}>
         <div className="section-header">

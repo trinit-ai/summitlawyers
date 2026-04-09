@@ -190,6 +190,20 @@ ul { list-style: none; }
   .nav-phone { display: none; }
 }
 
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition: opacity 0.8s cubic-bezier(.16,1,.3,1), transform 0.8s cubic-bezier(.16,1,.3,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.reveal-2 { transition-delay: 0.08s; }
+.reveal-3 { transition-delay: 0.16s; }
+.reveal-4 { transition-delay: 0.24s; }
+
 /* ── HAMBURGER + MOBILE MENU ── */
 .nav-burger {
   display: none;
@@ -1301,6 +1315,52 @@ ul { list-style: none; }
   color: rgba(255,255,255,0.75);
 }
 .ap-arrow { font-size: 10px; color: rgba(255,255,255,0.2); }
+
+/* ── SIDEBAR FORM (light variant) ── */
+.sidebar-form .contact-form { gap: 12px; }
+.sidebar-form .form-row { grid-template-columns: 1fr; gap: 10px; }
+.sidebar-form .form-field label { color: rgba(11,21,37,0.5); font-size: 8px; }
+.sidebar-form .form-field input,
+.sidebar-form .form-field textarea,
+.sidebar-form .form-field select {
+  background: white;
+  border-color: rgba(11,21,37,0.15);
+  color: var(--midnight);
+  font-size: 13px;
+  padding: 10px 12px;
+}
+.sidebar-form .form-field input:focus,
+.sidebar-form .form-field textarea:focus,
+.sidebar-form .form-field select:focus {
+  border-color: var(--gold);
+}
+.sidebar-form .form-checks { display: none; }
+.sidebar-form .form-agree {
+  color: rgba(11,21,37,0.5);
+  font-size: 10px;
+}
+.sidebar-form .form-submit {
+  background: var(--midnight);
+  border-color: var(--midnight);
+  color: var(--gold-lt);
+  padding: 12px 24px;
+  font-size: 9px;
+  width: 100%;
+  justify-content: center;
+}
+.sidebar-form .form-submit:hover { background: var(--navy-mid); }
+.sidebar-form .form-disclaimer {
+  color: rgba(11,21,37,0.4);
+  font-size: 9.5px;
+}
+.sidebar-form .form-success {
+  background: white;
+  border-color: var(--rule-cream);
+  padding: 20px;
+}
+.sidebar-form .form-success-title { color: var(--midnight); font-size: 17px; }
+.sidebar-form .form-success-body { color: rgba(11,21,37,0.55); font-size: 12px; }
+.sidebar-form .form-success-body a { color: var(--navy-mid); }
 
 /* ── CONTACT FORM ── */
 .contact-form {

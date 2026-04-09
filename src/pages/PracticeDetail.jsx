@@ -1,6 +1,8 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { Breadcrumb } from '../components/Layout'
 import ClosingCard from '../components/ClosingCard'
+import SEO from '../components/SEO'
+import ContactForm from '../components/ContactForm'
 import { FIRM, PRACTICE_AREAS, PRACTICE_DETAIL, getPracticeArea, getAttorney } from '../data/firm'
 
 export default function PracticeDetail() {
@@ -13,6 +15,11 @@ export default function PracticeDetail() {
 
   return (
     <>
+      <SEO
+        path={`/practice/${area.slug}`}
+        title={area.name}
+        description={detail.lead || `${area.name} — ${area.desc}. ${'Ventura, Miesowitz & Keough, P.C.'}, Summit, NJ.`}
+      />
       <Breadcrumb trail={[
         { to: '/', label: 'Home' },
         { to: '/practice', label: 'Practice Areas' },
@@ -94,6 +101,13 @@ export default function PracticeDetail() {
               ))}
             </div>
           )}
+
+          <div className="sidebar-block">
+            <div className="sidebar-label">Send a Message</div>
+            <div className="sidebar-form">
+              <ContactForm compact subject={area.name} />
+            </div>
+          </div>
 
           <div className="sidebar-block">
             <div className="sidebar-label">Service Area</div>

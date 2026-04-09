@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import { FIRM, PRACTICE_AREAS, ATTORNEYS, TOWNS, COUNTIES } from '../data/firm'
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
 
   return (
     <>
+      <SEO path="/" />
       {/* HERO */}
       <section className="hero">
         <div className="hero-bg"></div>
@@ -43,7 +45,7 @@ export default function Home() {
       </div>
 
       {/* INTRO */}
-      <section className="intro" id="about">
+      <section className="intro reveal" id="about">
         <div className="intro-left">
           <div className="eyebrow">The Firm</div>
           <h2>Large firm expertise.<br />Small firm service<br />and care.</h2>
@@ -56,7 +58,7 @@ export default function Home() {
       </section>
 
       {/* PRACTICE */}
-      <section className="practice" id="practice">
+      <section className="practice reveal" id="practice">
         <div className="section-header">
           <span className="section-header-label">Areas of Practice</span>
           <div className="section-header-rule"></div>
@@ -76,7 +78,7 @@ export default function Home() {
       </section>
 
       {/* ATTORNEYS */}
-      <section className="attorneys" id="attorneys">
+      <section className="attorneys reveal" id="attorneys">
         <div className="section-header">
           <span className="section-header-label" style={{ color: 'var(--gold)' }}>Our Attorneys</span>
           <div className="section-header-rule light"></div>
@@ -117,7 +119,7 @@ export default function Home() {
       </section>
 
       {/* COMMITMENT */}
-      <section className="commitment">
+      <section className="commitment reveal">
         <div className="commitment-left">
           <div className="eyebrow">A Commitment to Excellence</div>
           <h3>Principal-led representation, at every stage of your matter.</h3>
@@ -135,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="cta" id="contact">
+      <section className="cta reveal" id="contact">
         <div className="cta-left">
           <div className="eyebrow">Begin the Conversation</div>
           <h2>Your first consultation<br />is always without charge.</h2>

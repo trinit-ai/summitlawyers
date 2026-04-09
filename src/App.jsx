@@ -1,4 +1,6 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useScrollReveal } from './hooks/useScrollReveal'
 import { Nav, Footer, ScrollToTop } from './components/Layout'
 import Home from './pages/Home'
 import Attorneys from './pages/Attorneys'
@@ -9,6 +11,7 @@ import Contact from './pages/Contact'
 import Legal from './pages/Legal'
 
 export default function App() {
+  useScrollReveal()
   return (
     <>
       <ScrollToTop />

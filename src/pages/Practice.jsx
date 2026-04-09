@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
 import { Breadcrumb } from '../components/Layout'
+import SEO from '../components/SEO'
 import { PRACTICE_AREAS } from '../data/firm'
 
 export default function Practice() {
   return (
     <>
+      <SEO path="/practice" title="Practice Areas" description="Fourteen practice areas — Personal Injury, Estate Planning, Real Estate, Family Law, and more. Ventura, Miesowitz & Keough, P.C., Summit, NJ." />
       <Breadcrumb trail={[{ to: '/', label: 'Home' }, { label: 'Practice Areas' }]} />
       <section className="practice">
         <div className="section-header">
