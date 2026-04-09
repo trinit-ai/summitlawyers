@@ -6,6 +6,9 @@ export default function Contact() {
   return (
     <>
       <Breadcrumb trail={[{ to: '/', label: 'Home' }, { label: 'Contact' }]} />
+      <div className="office-hero">
+        <img src="/office.webp" alt="Ventura, Miesowitz & Keough, P.C. — 783 Springfield Avenue, Summit, NJ" />
+      </div>
       <section className="cta">
         <div className="cta-left">
           <div className="eyebrow">Begin the Conversation</div>
