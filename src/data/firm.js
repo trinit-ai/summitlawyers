@@ -49,25 +49,164 @@ export const PRACTICE_AREAS = [
 // Detail content for practice pages — falls back gracefully if missing
 export const PRACTICE_DETAIL = {
   'personal-injury': {
-    lead: "When injury changes everything, you deserve an advocate with the experience and resources to fight for full and fair compensation — and the personal attention of a partner, not an associate.",
+    lead: "Our team of Personal Injury lawyers offers more than 35 years of experience obtaining substantial recoveries for our clients. If you have been injured due to the negligence or wrongdoing of another, our goal is to provide the highest level of personal service and to achieve the best result possible for you.",
     overview: [
-      "Ventura, Miesowitz & Keough, P.C. has represented injured individuals and their families throughout New Jersey for over four decades. Our personal injury practice is built on a straightforward conviction: that every injured person deserves the same quality of legal representation as a major corporation — and that they should receive it from an experienced partner, not a junior associate.",
-      "Mr. Ventura and his team have litigated hundreds of Personal Injury and Workers' Compensation claims and have recovered substantial awards for injured plaintiffs, including a verdict with a minimum payout of $4,775,000. We handle matters from first consultation through trial and, when necessary, through appeal.",
-      "Our attorneys are available for home and hospital visits for clients who are unable to travel to our Summit office. All personal injury consultations are provided at no charge.",
+      "With a team of four highly experienced and compassionate lawyers, we work together to diligently pursue all claims for your losses, and to assist you in any way during this traumatic period of your life.",
+      "Our team has a broad range of experience in all areas of personal injury claims, including Wrongful Death Actions, Construction Job Site Accidents, Premises Liability Claims, Sidewalk and Parking Lot Slip and Falls, Automobile, Motorcycle and Truck Accidents, Pedestrian Accidents, Elder Abuse and Nursing Home Negligence, Retail Store Slip and Falls, Defective Products Liability, Dog Bites, and Workers' Compensation.",
+      "We take great pride in our dedication to our clients, which has resulted in tens of millions of dollars in compensation, including numerous seven-figure recoveries for all types of serious injuries. Once we are retained, our private investigator and experts will work with our team to fully investigate and develop the full value of your case. Additionally, we will assist you and your loved ones with all aspects of your claim — arranging for necessary medical treatment, getting your medical or auto insurance company to pay for your treatment, and applying for Social Security Disability or other Disability Coverage available to you.",
+      "There is no case too big or too small for us to handle. We will go out of our way to make every client and their family feel protected, comfortable, and informed throughout the legal process. If you cannot come to our office, we will always come to you.",
     ],
     caseTypes: [
-      'Motor Vehicle Accidents','Slip & Fall Injuries','Truck & Commercial Vehicle','Wrongful Death',
-      'Premises Liability','Construction Site Accidents','Dog Bites & Animal Attacks','Insurance Bad Faith',
-      'Catastrophic Injury',"Workers' Compensation",
+      'Wrongful Death','Construction Site Accidents','Premises Liability','Slip & Fall',
+      'Auto, Motorcycle & Truck Accidents','Pedestrian Accidents','Elder Abuse & Nursing Home','Retail Slip & Falls',
+      'Defective Products','Dog Bites',"Workers' Compensation",'Catastrophic Injury',
     ],
-    closing: "We represent clients in courts throughout Union, Morris, Essex, Somerset, Middlesex, and Monmouth Counties, as well as in federal courts when jurisdiction requires. Our office is accessible via Routes 24, 78, and 287 and the Garden State Parkway.",
+    closing: "If you have been injured and would like to know your rights, please contact Michael Ventura by phone at 908.277.2410 or email mventura@summitlawyers.net.",
+    attorneyIds: ['michael-ventura','maria-blancato','august-ventura'],
+  },
+
+  'estate-planning': {
+    lead: "Estate Planning is the process of arranging — during an individual's lifetime — for the distribution of the individual's estate following death, as well as arranging for financial and medical decisions to be made in the event of incapacity.",
+    overview: [
+      "The process is completed through the design and execution of legal documentation, including a Will (which names the representative of an estate, defines who will receive assets, establishes trusts for creditor protection, and sets directions for asset treatment after death), or a Revocable Living Trust (a will substitute that allows assets to avoid probate, ensures privacy, and avoids state death tax liens).",
+      "Other essential documents include a Health Care Directive — defining who has legal authority to direct healthcare decisions in the event of incapacity; a Power of Attorney — appointing another individual or corporation to handle financial affairs; and Trusts — which establish rules governing how an asset or class of assets will be treated, and can be used to limit estate taxes, safeguard privacy, protect assets from creditors, and provide for beneficiaries with special needs.",
+      "Estate Planning documentation must be drafted and executed in strict accordance with complex laws and regulations established by the Internal Revenue Service, the New Jersey Division of Taxation, and other state and federal statutes. The laws, regulations, tools, and standards governing Estate Planning are constantly changing.",
+      "Our Estate Planning department boasts two attorneys with advanced degrees in taxation (LL.M. in Taxation), who both teach Estate Planning to other professionals. We pride ourselves on keeping abreast of the constantly changing guidelines governing the practice.",
+    ],
+    closing: "We particularly specialize in coordinating personal Estate Plans with the business succession plans of closely-held business owners, including the creation of succession plans through Buy-Sell Agreements, Corporate Restructuring, and the gifting of non-controlling interests in business.",
     process: [
-      { title: 'Free Initial Consultation', desc: 'We meet with you — at our office, your home, or your hospital room — to understand what happened and evaluate your case. There is no charge and no obligation.' },
-      { title: 'Investigation & Demand', desc: 'We gather evidence, retain experts when necessary, and prepare a comprehensive demand that accurately reflects the full extent of your losses — current and future.' },
-      { title: 'Negotiation', desc: 'Most cases resolve before trial. We negotiate from a position of preparation and credibility, so insurers know we are ready to litigate if necessary.' },
-      { title: 'Trial & Appeal', desc: 'When a fair settlement is not possible, our attorneys are experienced trial lawyers prepared to take your case to verdict — and, if required, through the appellate courts.' },
+      { title: 'Explore Your Goals', desc: "We begin by understanding what matters most — family, business succession, charitable intent, tax minimization." },
+      { title: 'Explain the Framework', desc: 'We walk you through the basic rules and tools relevant to achieving your goals.' },
+      { title: 'Craft the Plan', desc: 'We coordinate your goals within the framework of applicable laws and regulations.' },
+      { title: 'Draft & Execute', desc: 'We prepare the documentation necessary to memorialize and effectuate your plan.' },
+      { title: 'Update Over Time', desc: 'We work with you to amend your plan as your goals and the regulatory framework evolve.' },
     ],
-    attorneyIds: ['michael-ventura','daniel-keough','sean-rankin'],
+    attorneyIds: ['john-miesowitz','sean-rankin','laurie-levine'],
+  },
+
+  'trust-estate-administration': {
+    lead: "Estate Administration (or probate) is the process by which an individual's financial affairs are resolved following death. We guide families through every facet of the process.",
+    overview: [
+      "The process involves determining who is entitled to serve as the legal representative of the decedent's estate and obtaining their formal appointment; identifying, marshalling, and valuing the assets of the deceased; identifying and satisfying the debts of the deceased and the expenses of the estate; determining and satisfying state and federal taxes resulting from the death; obtaining a release of the New Jersey Transfer and Inheritance Tax Lien; and distributing net assets pursuant to the decedent's testamentary intent — or, if no formal estate plan exists, pursuant to the applicable state laws of intestacy.",
+      "Appointment as the representative of an estate (called the \"executor\" if appointed under a will, or the \"administrator\" if appointed under intestacy statutes) creates personal liability on the part of the representative to the extent of the value of the decedent's assets.",
+      "We are expert at limiting the extent of estate and inheritance tax liability, to the extent permitted under applicable federal and state law, and at ensuring that the personal liability resulting from the representative's appointment is fully discharged at the conclusion of the administration process.",
+    ],
+    closing: "We are able to guide you through all facets of the estate administration process, including the preparation and filing of all applicable state and federal estate and inheritance tax returns.",
+    attorneyIds: ['john-miesowitz','sean-rankin','laurie-levine'],
+  },
+
+  'estate-litigation': {
+    lead: "Our litigators and trust and estates counsel work together in a coordinated approach to identify potential issues and resolve them through whatever means is appropriate and effective.",
+    overview: [
+      "If litigation is necessary to achieve a client's goals, our skilled courtroom advocates are prepared to take an aggressive posture, presenting matters of any magnitude and complexity in the courtroom. The substantive knowledge of our litigators regarding trust and estate issues provides them with an invaluable advantage in developing and implementing litigation strategies.",
+      "Our attorneys have handled a wide variety of estate disputes including will contests, will construction actions, reciprocal will cases, omitted spouse statute claims, guardianship proceedings, challenges to inter vivos transfers, lost will cases, claims of breach of fiduciary duty and fiduciary removal, will revocation and prevention of revocation claims, and accounting actions.",
+      "Members of our Firm are frequently appointed by the Probate Part of the Superior Court, Chancery Division, as counsel for alleged incapacitated persons, guardians, and guardians ad litem, as well as early settlement panelists for probate cases pending in Union, Somerset, and Morris County Superior Court.",
+    ],
+    attorneyIds: ['michael-ventura','john-miesowitz'],
+  },
+
+  'mediation-arbitration': {
+    lead: "Our attorneys regularly participate in both Mediations and Arbitrations, serving both as advocates and as third-party neutrals.",
+    overview: [
+      "Our litigators frequently utilize alternative dispute resolution mechanisms as a means of effectuating the best results for our clients in a very cost-effective manner.",
+      "Members of our Firm serve as Rule 1:40 court-appointed mediators and as Court-appointed Arbitrators in Somerset, Union, Morris, and Middlesex Counties. We also serve as Early Settlement Panelists regularly appointed by the Probate Part of both the Union and Morris County Superior Courts.",
+      "Mr. Ventura has served as a Court-appointed Mediator/Receiver in complex Business Litigation, as well as an Arbitrator in UM/UIM Arbitrations.",
+    ],
+    attorneyIds: ['michael-ventura'],
+  },
+
+  'business-law': {
+    lead: "From small business formation to mergers, succession planning, and contract negotiation — we serve as long-term counsel to closely-held businesses across New Jersey and New York.",
+    overview: [
+      "While it is simple to form a legal entity for the operation of a business, it is necessary to respect certain formalities in order to gain the benefit of any limited liability. We can assist you in choosing the appropriate form of entity for your intended use and provide guidance on how best to use that entity to minimize your personal liabilities.",
+      "Corporations have many more regulatory requirements than LLCs — bylaws, stock issuance, transfer ledgers, annual meetings, corporate taxes, and annual reports. LLCs are only required to file annual reports, but performing certain regulatory functions of a corporation will increase the likelihood that the LLC is treated as a separate entity. We can prepare and maintain the consents, resolutions, operating agreements, and stock ledgers necessary for proper operation.",
+      "Whether a small business is run by a single family or is a broader coalition of business associates, coordinating and planning the fate of the business in the event of the death or incapacity of a principal is essential. The most common tool used in business succession planning is the buy-sell agreement, which allows shareholders/members to negotiate a price (or formula) for the buy-out of a deceased or disabled shareholder's interest, and to allow for continuity of management. We have assisted in the negotiation and preparation of many buy-sell agreements for a vast range of businesses.",
+      "We have experience with mergers — both combining two separate businesses into a single entity, and converting one form of entity into another. We also draft, review, and negotiate contracts of every kind: purchase and sale agreements, waivers, employment agreements, independent contractor agreements, consulting agreements, non-disclosure / non-compete / non-solicitation agreements, profit sharing agreements, and joint venture agreements.",
+      "We have significant experience with the drafting, review, and negotiation of commercial real estate contracts and leases, and serve as the sole attorneys of commercial landlords and property managers in both New Jersey and New York City.",
+    ],
+    closing: "If you have questions or require assistance in any of these areas, please contact Sean Rankin at 908.277.2410 or srankin@summitlawyers.net.",
+    attorneyIds: ['sean-rankin','john-miesowitz'],
+  },
+
+  'commercial-real-estate': {
+    lead: "Whether you are an owner, landlord, or lessee, your business needs the advice and guidance of a commercial real estate attorney with experience handling all aspects of real estate matters.",
+    overview: [
+      "Although commercial real estate investment may be very profitable, there is always an element of risk involved — non-payment of rent, depreciation, environmental liability. Regardless of your company's industry, its commercial real estate holdings can have a tremendous impact on the bottom line.",
+      "We handle everything from drafting and negotiating leases and sales agreements to addressing zoning issues and environmental problems. From the moment your business decides to invest in new property, divest existing property, or renegotiate a lease, a commercial real estate attorney should be your first call — due to their experience working with buyers, sellers, landlords, real estate agents, title insurers, lenders, and mortgage companies.",
+    ],
+    attorneyIds: ['daniel-keough','sean-rankin'],
+  },
+
+  'residential-real-estate': {
+    lead: "The sale or purchase of a home is one of the most important legal transactions in a person's life — and understanding the process is essential to avoid future litigation.",
+    overview: [
+      "Real estate attorneys advise and assist homeowners in all stages of property ownership, including negotiating, drafting, and reviewing all legal documents that form part of the real estate transaction.",
+      "We can represent homeowners in the event of defect or non-disclosure litigation, apply for zoning variances, appeal property tax assessments, clear liens, explore options to prevent foreclosure, and defend homeowners during foreclosure proceedings.",
+      "Residential real estate attorneys can also represent either landlords or tenants on lease negotiations, in landlord-tenant disputes, or in eviction proceedings.",
+    ],
+    attorneyIds: ['daniel-keough','james-vigliotti'],
+  },
+
+  'property-tax-appeals': {
+    lead: "Dan Keough, Esq. specializes in filing and litigating real estate tax appeals against municipalities, for all types of real estate in New Jersey, on behalf of taxpayers who believe their assessment is too high.",
+    overview: [
+      "Mr. Keough handles appeals for residential, commercial, industrial, hotel, multi-family, and other property types. He will analyze the taxpayer's data to determine whether an appeal is warranted — taxes can actually be increased in New Jersey if an appeal is filed on an under-assessed property. The party appealing bears the burden to disprove the assessment, which is presumed correct, by clear and convincing evidence that the assessment is not based on fair market value.",
+      "Tax appeals are filed both at the County Tax Boards and the Tax Court of New Jersey, based on certain criteria. There is an annual filing deadline for New Jersey real estate tax appeals as early as January 15 (for Monmouth County properties) and April 1 of the year of appeal (for all other Counties). Municipalities that were either revalued or reassessed may extend their annual deadlines, so filing dates must be checked on a case-by-case basis.",
+      "It is important that a property owner considering a tax appeal seek professional advice from an attorney like Mr. Keough, who specializes in this field of law.",
+    ],
+    closing: "Mr. Keough's legal fees are based on a percentage of the tax savings he achieves for the client. If no savings are achieved, no legal fee is due. Hourly and project fees are also available.",
+    attorneyIds: ['daniel-keough'],
+  },
+
+  'matrimonial-family': {
+    lead: "We are acutely aware that family law matters can be quite emotional and stressful for everyone involved. When we represent a client under these circumstances, we try to take the emotion out of a difficult process by being calm, deliberate, and considerate of your distress.",
+    overview: [
+      "With that in mind, our first priority is to make a good faith effort to settle your case before any litigation commences, if possible. We believe it is much better for you to decide your own fate, rather than a judge who does not know you or your circumstances as well as you do.",
+      "By the same token, we will work zealously to protect your legal rights so that there is a fair resolution of all of the outstanding issues in your matter. That may also mean commencing litigation as appropriate to vigorously present your position to the Court.",
+      "Throughout this process, we remain mindful of your legal fees and costs. No one wants to see their family's assets depleted by professional fees. We try to minimize legal fees and costs to the extent possible, without compromising the quality of our services.",
+    ],
+    closing: "Since there are a variety of family law situations (divorce, custody, domestic violence, paternity, etc.), please contact us so we can determine how we can best assist you. Our goal is to provide \"large firm expertise with small firm service and care.\"",
+    attorneyIds: ['august-ventura','james-vigliotti'],
+  },
+
+  'elder-law': {
+    lead: "Elder law focuses on the legal needs of the elderly — retirement planning, medical costs, estate planning, and the protection of assets and dignity in later life.",
+    overview: [
+      "Elder planning often goes hand in hand with estate planning. Attorneys who specialize in elder law help protect assets while preventing the risk of penalties. We advise and assist in matters of Medicare, Social Security, veteran's benefits, and other government benefit programs; powers of attorney for medical and financial decisions; health and personal care planning, including medical care directives, long-term care plans, and end-of-life decisions; insurance; quality of life and independence; retirement planning; and estate planning, wills, and trusts.",
+      "Elder law attorneys also handle issues concerning elder abuse — including physical abuse and financial abuse. Financial abuse occurs when someone takes advantage of an elderly person's physical or mental incapacitation to steal money from him or her.",
+      "It is best to seek an elder law attorney's services before illness or incapacity becomes an issue, so they can help you draft legal documents detailing exactly how certain situations should be handled if you are not able to make decisions for yourself.",
+    ],
+    attorneyIds: ['john-miesowitz'],
+  },
+
+  'workers-compensation': {
+    lead: "Did you know you are entitled to three distinct benefits if you are hurt at work? There is no legal fee unless we obtain a settlement for you.",
+    overview: [
+      "Your employer is obligated to provide: (1) temporary disability if your injury keeps you out of work for more than three business days; (2) medical treatment with no co-pays or deductibles charged to you (however, you must be treated by the doctors assigned to you by your employer's carrier); and (3) an award for partial permanent disability if your injury is permanent, even if you return to the same job.",
+      "Maria Blancato will be the only attorney working on your case. She is committed to working on your matter not only to get you the best result possible, but also to make sure you feel confident and comfortable in the process.",
+    ],
+    closing: "I would be honored to discuss your Worker's Compensation claim with you. Please call me at 908.277.2410, ext. 131 or email me at mblancato@summitlawyers.net.",
+    attorneyIds: ['maria-blancato'],
+  },
+
+  'social-security-disability': {
+    lead: "Were you forced to stop working because of disabling pain, illness, or mental health? You may be entitled to Social Security Disability Benefits — and there is no legal fee unless we obtain benefits for you.",
+    overview: [
+      "If you have worked, you could be entitled to Social Security Disability Benefits known as SSDI. If you are of limited assets with little or no work history, you may be entitled to SSI benefits.",
+      "The Social Security disability system is an important safety net that allows qualified injured or disabled people to receive some income and health benefits if they can no longer work because they are disabled.",
+      "Maria Blancato can help you apply for these benefits. Please call 908.277.2410, ext. 131 or email mblancato@summitlawyers.net to discuss your SSD application.",
+    ],
+    attorneyIds: ['maria-blancato'],
+  },
+
+  'criminal-municipal': {
+    lead: "Have you or your teenager been charged with a traffic violation, DWI, simple assault, criminal mischief, or shoplifting? Maria Blancato served as an Assistant Prosecutor in Somerset County for four years and brings extensive trial experience to your defense.",
+    overview: [
+      "Charges we handle include speeding, careless driving, reckless driving, leaving the scene of an accident, driving under the influence, possession of drugs/CDS in a car or in a park, simple or aggravated assault, criminal mischief, and shoplifting.",
+      "Ms. Blancato worked on both juvenile and adult matters as a prosecutor. Her goal is to get you the best result — whether that is a plea or a trial. She will be the only person responsible for your matter if you hire her.",
+    ],
+    closing: "Please call 908.277.2410, ext. 131 or email mblancato@summitlawyers.net to discuss your matter.",
+    attorneyIds: ['maria-blancato','august-ventura'],
   },
 }
 
