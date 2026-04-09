@@ -130,6 +130,13 @@ export default function PracticeDetail() {
               <span className="ap-arrow">↗</span>
             </Link>
           ))}
+          <Link to="/contact" className="ap-item ap-item-cta">
+            <div>
+              <div className="ap-cta-eyebrow">Don't see your matter?</div>
+              <div className="ap-name">Speak with an attorney</div>
+            </div>
+            <span className="ap-arrow">↗</span>
+          </Link>
         </div>
       </section>
     </>
