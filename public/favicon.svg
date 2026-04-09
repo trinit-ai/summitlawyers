@@ -1,6 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
   <rect width="32" height="32" fill="#0B1525"/>
-  <circle cx="16" cy="16" r="14.5" fill="none" stroke="#B8972A" stroke-width="0.75" stroke-opacity="0.5"/>
-  <circle cx="16" cy="16" r="11.5" fill="none" stroke="#B8972A" stroke-width="0.5" stroke-opacity="0.28"/>
-  <text x="16" y="20.5" font-family="Georgia, 'Times New Roman', serif" font-size="10" font-style="italic" fill="#D4AF5A" fill-opacity="0.9" text-anchor="middle" letter-spacing="0.5">VMK</text>
+  <g transform="translate(4,4) scale(1)" fill="none" stroke="#D4AF5A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+    <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+    <path d="M7 21h10"/>
+    <path d="M12 3v18"/>
+    <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+  </g>
 </svg>
