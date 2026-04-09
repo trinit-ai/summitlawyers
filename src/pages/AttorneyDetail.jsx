@@ -42,7 +42,7 @@ export default function AttorneyDetail() {
       <div className="bio-hero">
         <div className="bio-hero-bg"></div>
         <div className="bio-photo-wrap">
-          <div className="bio-photo"><img src={`/attorneys/${attorney.slug}.webp`} alt={attorney.name} data-slug={attorney.slug} /></div>
+          <div className="bio-photo"><img src={`/attorneys/${attorney.slug}.webp`} alt={attorney.name} data-slug={attorney.slug} width="200" height="240" /></div>
         </div>
         <div className="bio-hero-text">
           {attorney.department && <div className="bio-hero-dept">{attorney.department}</div>}
@@ -167,7 +167,7 @@ export default function AttorneyDetail() {
           <div className="related-grid">
             {others.map(o => (
               <Link key={o.slug} to={`/attorneys/${o.slug}`} className="related-card">
-                <div className="related-monogram"><img src={`/attorneys/${o.slug}.webp`} alt={o.name} data-slug={o.slug} /></div>
+                <div className="related-monogram"><img src={`/attorneys/${o.slug}.webp`} alt={o.name} data-slug={o.slug} width="56" height="56" loading="lazy" /></div>
                 <div className="related-name">{o.name}</div>
                 <div className="related-role">{o.role}</div>
               </Link>

@@ -92,7 +92,7 @@ export default function PracticeDetail() {
               <div className="sidebar-label">Attorneys in This Practice</div>
               {attorneys.map(a => (
                 <Link key={a.slug} to={`/attorneys/${a.slug}`} className="atty-mini">
-                  <div className="atty-mini-mono"><img src={`/attorneys/${a.slug}.webp`} alt={a.name} data-slug={a.slug} /></div>
+                  <div className="atty-mini-mono"><img src={`/attorneys/${a.slug}.webp`} alt={a.name} data-slug={a.slug} width="40" height="40" loading="lazy" /></div>
                   <div>
                     <div className="atty-mini-name">{a.name}</div>
                     <div className="atty-mini-role">{a.role}</div>

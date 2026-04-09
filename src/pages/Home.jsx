@@ -86,7 +86,7 @@ export default function Home() {
             <div className="atty-col-label">Partners</div>
             {partners.map(a => (
               <Link key={a.slug} to={`/attorneys/${a.slug}`} className="atty-item">
-                <div className="atty-monogram"><img src={`/attorneys/${a.slug}.webp`} alt={a.name} data-slug={a.slug} /></div>
+                <div className="atty-monogram"><img src={`/attorneys/${a.slug}.webp`} alt={a.name} data-slug={a.slug} width="44" height="44" loading="lazy" /></div>
                 <div>
                   <div className="atty-name">{a.name}</div>
                   <div className="atty-role">{a.role}</div>
@@ -98,7 +98,7 @@ export default function Home() {
             <div className="atty-col-label">Attorneys &amp; Counsel</div>
             {counsel.map(a => (
               <Link key={a.slug} to={`/attorneys/${a.slug}`} className="atty-item">
-                <div className="atty-monogram"><img src={`/attorneys/${a.slug}.webp`} alt={a.name} data-slug={a.slug} /></div>
+                <div className="atty-monogram"><img src={`/attorneys/${a.slug}.webp`} alt={a.name} data-slug={a.slug} width="44" height="44" loading="lazy" /></div>
                 <div>
                   <div className="atty-name">{a.name}</div>
                   <div className="atty-role">{a.role}</div>

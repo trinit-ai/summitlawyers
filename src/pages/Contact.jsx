@@ -9,7 +9,7 @@ export default function Contact() {
       <SEO path="/contact" title="Contact" description="Schedule a free consultation. Ventura, Miesowitz & Keough, P.C., 783 Springfield Avenue, Summit, NJ. Call 908.277.2410." />
       <Breadcrumb trail={[{ to: '/', label: 'Home' }, { label: 'Contact' }]} />
       <div className="office-hero">
-        <img src="/office.webp" alt="Ventura, Miesowitz & Keough, P.C. — 783 Springfield Avenue, Summit, NJ" />
+        <img src="/office.webp" alt="Ventura, Miesowitz & Keough, P.C. — 783 Springfield Avenue, Summit, NJ" width="2000" height="1125" fetchpriority="high" />
       </div>
       <section className="cta">
         <div className="cta-left">
