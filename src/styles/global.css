@@ -21,6 +21,7 @@
   --f-sans: -apple-system, 'Helvetica Neue', Arial, sans-serif;
 }
 
+html { background: var(--midnight); }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
@@ -178,6 +179,15 @@ ul { list-style: none; }
   .modal-overlay { padding: 24px 16px; }
   .modal-panel { padding: 40px 24px 32px; }
   .nav-phone { display: none; }
+}
+
+/* ── ROUTE FADE ── */
+.route-fade {
+  animation: route-fade-in 0.35s ease-out;
+}
+@keyframes route-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* ── SCROLL REVEAL ── */

@@ -1,5 +1,4 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
 import { useScrollReveal } from './hooks/useScrollReveal'
 import { useSmoothScroll } from './hooks/useSmoothScroll'
 import { Nav, Footer, ScrollToTop } from './components/Layout'
@@ -12,13 +11,10 @@ import Contact from './pages/Contact'
 import Legal from './pages/Legal'
 import NotFound from './pages/NotFound'
 
-export default function App() {
-  useSmoothScroll()
-  useScrollReveal()
+function AppRoutes() {
+  const { pathname } = useLocation()
   return (
-    <>
-      <ScrollToTop />
-      <Nav />
+    <main key={pathname} className="route-fade">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/attorneys" element={<Attorneys />} />
@@ -29,6 +25,18 @@ export default function App() {
         <Route path="/legal/:slug" element={<Legal />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+    </main>
+  )
+}
+
+export default function App() {
+  useSmoothScroll()
+  useScrollReveal()
+  return (
+    <>
+      <ScrollToTop />
+      <Nav />
+      <AppRoutes />
       <Footer />
     </>
   )
