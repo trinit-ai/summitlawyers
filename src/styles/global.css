@@ -1162,6 +1162,24 @@ ul { list-style: none; }
   z-index: 0;
 }
 
+/* ── LEGAL PAGE ── */
+.legal-section { margin-bottom: 32px; }
+.legal-section h2 {
+  font-family: var(--f-serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--midnight);
+  margin-bottom: 14px;
+  letter-spacing: 0.01em;
+}
+.legal-section p {
+  font-size: 14px;
+  color: rgba(11,21,37,0.6);
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
+.legal-section p:last-child { margin-bottom: 0; }
+
 /* ── CLOSING ORNAMENT ── */
 .closing-card {
   margin: 56px 0 8px;
