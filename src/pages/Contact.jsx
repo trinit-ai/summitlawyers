@@ -1,0 +1,40 @@
+import { Breadcrumb } from '../components/Layout'
+import { FIRM } from '../data/firm'
+
+export default function Contact() {
+  return (
+    <>
+      <Breadcrumb trail={[{ to: '/', label: 'Home' }, { label: 'Contact' }]} />
+      <section className="cta">
+        <div className="cta-left">
+          <div className="eyebrow">Begin the Conversation</div>
+          <h2>Your first consultation<br />is always without charge.</h2>
+          <p>We believe the attorney-client relationship begins with listening. Tell us about your matter — we'll tell you honestly what we can do and what to expect. We are available evenings and weekends by appointment, and can come to you if you cannot come to us.</p>
+          <a href={FIRM.phoneHref} className="btn-inv">Call {FIRM.phone} &nbsp;↗</a>
+        </div>
+        <div className="cta-right">
+          <div className="contact-item">
+            <div className="ci-label">Address</div>
+            <div className="ci-val">{FIRM.address.street}<br />{FIRM.address.city}, {FIRM.address.state} 07901</div>
+          </div>
+          <div className="contact-item">
+            <div className="ci-label">Telephone</div>
+            <div className="ci-val"><a href={FIRM.phoneHref}>{FIRM.phone}</a></div>
+          </div>
+          <div className="contact-item">
+            <div className="ci-label">Facsimile</div>
+            <div className="ci-val">{FIRM.fax}</div>
+          </div>
+          <div className="contact-item">
+            <div className="ci-label">Office Hours</div>
+            <div className="ci-val">Monday – Friday<br />9:00 a.m. – 5:00 p.m.</div>
+          </div>
+          <div className="contact-item">
+            <div className="ci-label">Evening Appointments</div>
+            <div className="ci-val">Available by arrangement<br /><a href={FIRM.phoneHref}>{FIRM.phone}</a></div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
