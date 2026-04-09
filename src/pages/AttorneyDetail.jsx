@@ -18,7 +18,20 @@ export default function AttorneyDetail() {
       <SEO
         path={`/attorneys/${attorney.slug}`}
         title={attorney.name}
-        description={`${attorney.name}, ${attorney.position || attorney.role} at ${'Ventura, Miesowitz & Keough, P.C.'} in Summit, NJ. ${attorney.bio?.[0]?.slice(0, 140) || ''}`}
+        description={`${attorney.name}, ${attorney.position || attorney.role} at Ventura, Miesowitz & Keough, P.C. in Summit, NJ. ${attorney.bio?.[0]?.slice(0, 140) || ''}`}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Attorney',
+          name: attorney.name,
+          jobTitle: attorney.position || attorney.role,
+          email: attorney.email,
+          image: `https://summitlawyers.vercel.app/attorneys/${attorney.slug}.webp`,
+          worksFor: {
+            '@type': 'LegalService',
+            name: 'Ventura, Miesowitz & Keough, P.C.',
+            url: 'https://summitlawyers.vercel.app',
+          },
+        }}
       />
       <Breadcrumb trail={[
         { to: '/', label: 'Home' },
@@ -69,6 +82,26 @@ export default function AttorneyDetail() {
               <ul className="bar-list">
                 {attorney.bar.map(b => <li key={b}>{b}</li>)}
               </ul>
+            </div>
+          )}
+          {attorney.testimonials && (
+            <div className="bar-memberships">
+              <div className="section-label">Client Reviews</div>
+              <div className="testimonials">
+                {attorney.testimonials.map((t, i) => (
+                  <div key={i} className="testimonial">
+                    <div className="testimonial-stars">{'★'.repeat(t.rating)}</div>
+                    <p className="testimonial-body">{t.body}</p>
+                    <div className="testimonial-meta">— {t.author}, {t.date}</div>
+                  </div>
+                ))}
+              </div>
+              {attorney.testimonialsSource && (
+                <p style={{ fontSize: 11, color: 'rgba(11,21,37,0.4)', marginTop: 16 }}>
+                  Additional reviews available on{' '}
+                  <a href={attorney.testimonialsSource} target="_blank" rel="noreferrer" style={{ color: 'var(--navy-mid)', textDecoration: 'underline' }}>Avvo ↗</a>.
+                </p>
+              )}
             </div>
           )}
           <ClosingCard />

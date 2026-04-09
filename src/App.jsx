@@ -10,6 +10,7 @@ import Practice from './pages/Practice'
 import PracticeDetail from './pages/PracticeDetail'
 import Contact from './pages/Contact'
 import Legal from './pages/Legal'
+import NotFound from './pages/NotFound'
 
 export default function App() {
   useSmoothScroll()
@@ -26,7 +27,7 @@ export default function App() {
         <Route path="/practice/:slug" element={<PracticeDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/legal/:slug" element={<Legal />} />
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>

@@ -318,6 +318,25 @@ export const ATTORNEYS = [
       'Former Assistant Prosecutor, Somerset County',
       'District Fee Arbitration Committee, Union County — Former Panel Chair',
     ],
+    testimonials: [
+      {
+        rating: 5, author: 'Ron', date: 'June 2020',
+        body: "Ms. Blancato provided consistently professional representation related to my case over the past two years. She followed through on all matters and kept me informed throughout the process. This included setting up appointments with medical professionals and thorough communication. Despite the systemic challenges presented by the recent disease epidemic, Ms. Blancato persevered and communicated throughout the process leading to a successful professional and financial outcome for my case. I would highly recommend her and her firm overall.",
+      },
+      {
+        rating: 5, author: 'Debbie', date: 'February 2020',
+        body: "Ms. Blancato is a very professional, hardworking attorney. Ms. Blancato went above and beyond the call of duty on my case. She explained everything in detail about my case, and in terms that I could understand. After my consultation with Ms. Blancato I knew she was the right attorney for my case. She has the same morals as I do. My case was very time consuming. I was ready to give up but she didn't, she forged ahead like a steam roller. Because of her persistence the case had a favorable outcome.",
+      },
+      {
+        rating: 5, author: 'Elise', date: 'August 2019',
+        body: "Maria Blancato was extremely helpful during the difficult social security disability process. She advised me long before I became a client and once I retained her, her services were invaluable. She was always accessible, returned my emails and calls in a timely manner. In large part, I believe my disability case was finally approved largely to her expertise. Thank you Maria.",
+      },
+      {
+        rating: 5, author: 'Christina', date: 'October 2018',
+        body: "Maria was absolutely amazing! She got in touch with me ASAP and was extremely patient on the phone listening to my story. She explained everything to me and answered my questions. She emailed me right away with the documentation I needed. She immediately set up my court date. She contacted me to talk about exactly how it would work in court and calmed my fears. She arrived early at the courthouse and was the first attorney to talk with the prosecutor. She handled my case with the judge with poise and experience. Not only is she a great lawyer, she is extremely personable and fun to talk to. I highly recommend her!",
+      },
+    ],
+    testimonialsSource: 'https://www.avvo.com/attorneys/07901-nj-maria-blancato-1590337/reviews.html',
   },
   {
     slug: 'august-ventura', initials: 'AV', name: 'August M. Ventura',
