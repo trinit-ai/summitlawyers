@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { Breadcrumb } from '../components/Layout'
+import ClosingCard from '../components/ClosingCard'
 import { FIRM, PRACTICE_AREAS, PRACTICE_DETAIL, getPracticeArea, getAttorney } from '../data/firm'
 
 export default function PracticeDetail() {
@@ -41,7 +42,9 @@ export default function PracticeDetail() {
             </div>
           )}
 
-          {detail.closing && <p>{detail.closing}</p>}
+          <ClosingCard
+            text={detail.closing || `To learn more about how we approach ${area.name.toLowerCase()} matters, please call us at ${FIRM.phone} or email ${FIRM.email}. Initial consultations are without charge.`}
+          />
 
           {detail.process && (
             <div className="process">
