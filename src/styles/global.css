@@ -1351,16 +1351,14 @@ ul { list-style: none; }
   border-left: 2px solid var(--gold);
 }
 .ap-item-cta:hover { background: linear-gradient(135deg, rgba(184,151,42,0.18), rgba(184,151,42,0.06)); }
-.ap-item-cta .ap-name { color: var(--gold-lt); }
-.ap-item-cta .ap-arrow { color: var(--gold); opacity: 0.7; }
-.ap-cta-eyebrow {
-  font-size: 9px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  opacity: 0.7;
-  margin-bottom: 4px;
+.ap-item-cta .ap-name {
+  color: var(--gold-lt);
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+.ap-item-cta .ap-arrow { color: var(--gold); opacity: 0.7; }
 .ap-name {
   font-family: var(--f-serif);
   font-size: 14px;
