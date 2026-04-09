@@ -1575,6 +1575,16 @@ ul { list-style: none; }
   .related-grid { grid-template-columns: 1fr 1fr; }
   .all-practices-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
+  .form-checks { grid-template-columns: 1fr 1fr; gap: 10px 14px; }
+  .form-check { font-size: 11.5px; align-items: flex-start; }
+  .form-check span { line-height: 1.4; }
+  .band {
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 24px;
+  }
+  .band-dot { display: none; }
+  .band-item { font-size: 9px; }
   .bio-hero { flex-direction: column; align-items: flex-start; gap: 32px; }
   .sidebar { position: static; }
   .detail-content { border-right: none; border-bottom: 1px solid var(--rule-cream); }
