@@ -2,6 +2,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { FIRM } from '../data/firm'
 import ContactModal from './ContactModal'
+import { getLenis } from '../hooks/useSmoothScroll'
 
 export function Nav() {
   const [open, setOpen] = useState(false)
@@ -77,7 +78,11 @@ export function Footer() {
 
 export function ScrollToTop() {
   const { pathname } = useLocation()
-  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  useEffect(() => {
+    const lenis = getLenis()
+    if (lenis) lenis.scrollTo(0, { immediate: true })
+    else window.scrollTo(0, 0)
+  }, [pathname])
   return null
 }
 
