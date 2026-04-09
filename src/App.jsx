@@ -6,6 +6,7 @@ import AttorneyDetail from './pages/AttorneyDetail'
 import Practice from './pages/Practice'
 import PracticeDetail from './pages/PracticeDetail'
 import Contact from './pages/Contact'
+import Legal from './pages/Legal'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/practice" element={<Practice />} />
         <Route path="/practice/:slug" element={<PracticeDetail />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/legal/:slug" element={<Legal />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#0B1525"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="#B8972A" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="32" cy="32" r="20" fill="none" stroke="#B8972A" stroke-width="1" opacity="0.5"/>
+  <text x="32" y="40" font-family="Georgia, serif" font-size="16" font-style="italic" fill="#D4AF5A" text-anchor="middle">VMK</text>
+</svg>

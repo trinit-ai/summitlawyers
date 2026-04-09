@@ -1,19 +1,45 @@
 import { NavLink, Link, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { FIRM } from '../data/firm'
 
 export function Nav() {
+  const [open, setOpen] = useState(false)
+  const { pathname } = useLocation()
+  useEffect(() => { setOpen(false) }, [pathname])
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [open])
+
   return (
-    <nav className="nav">
-      <Link to="/" className="nav-logo">{FIRM.shortName}</Link>
-      <ul className="nav-links">
-        <li><NavLink to="/" end>The Firm</NavLink></li>
-        <li><NavLink to="/practice">Practice Areas</NavLink></li>
-        <li><NavLink to="/attorneys">Attorneys</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
-      </ul>
-      <a href={FIRM.phoneHref} className="nav-cta">{FIRM.phone}</a>
-    </nav>
+    <>
+      <nav className="nav">
+        <Link to="/" className="nav-logo">{FIRM.shortName}</Link>
+        <ul className="nav-links">
+          <li><NavLink to="/" end>The Firm</NavLink></li>
+          <li><NavLink to="/practice">Practice Areas</NavLink></li>
+          <li><NavLink to="/attorneys">Attorneys</NavLink></li>
+          <li><NavLink to="/contact">Contact</NavLink></li>
+        </ul>
+        <a href={FIRM.phoneHref} className="nav-cta nav-cta-desktop">{FIRM.phone}</a>
+        <button
+          className={`nav-burger${open ? ' open' : ''}`}
+          onClick={() => setOpen(o => !o)}
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      {open && (
+        <div className="mobile-menu">
+          <NavLink to="/" end>The Firm</NavLink>
+          <NavLink to="/practice">Practice Areas</NavLink>
+          <NavLink to="/attorneys">Attorneys</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+          <a href={FIRM.phoneHref} className="mobile-menu-cta">Call {FIRM.phone}</a>
+        </div>
+      )}
+    </>
   )
 }
 

@@ -36,6 +36,23 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      <section className="map-section">
+        <div className="section-header">
+          <span className="section-header-label" style={{ color: 'var(--gold)' }}>Maps &amp; Directions</span>
+          <div className="section-header-rule light"></div>
+        </div>
+        <iframe
+          title="Office Location"
+          src="https://www.google.com/maps?q=783+Springfield+Avenue+Summit+NJ+07901&output=embed"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="map-embed"
+        />
+        <p className="map-note">
+          Our office is accessible via Routes 24, 78, and 287 and the Garden State Parkway. We serve clients throughout Summit, New Providence, Berkeley Heights, Westfield, Chatham, Madison, and every county in New Jersey.{' '}
+          <a href="https://maps.google.com/?q=783+Springfield+Avenue+Summit+NJ+07901" target="_blank" rel="noreferrer">Open in Google Maps ↗</a>
+        </p>
+      </section>
     </>
   )
 }
