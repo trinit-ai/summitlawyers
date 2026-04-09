@@ -8,6 +8,15 @@ export default function Practice() {
     <>
       <SEO path="/practice" title="Practice Areas" description="Fourteen practice areas — Personal Injury, Estate Planning, Real Estate, Family Law, and more. Ventura, Miesowitz & Keough, P.C., Summit, NJ." />
       <Breadcrumb trail={[{ to: '/', label: 'Home' }, { label: 'Practice Areas' }]} />
+      <div className="practice-hero">
+        <div className="practice-hero-bg"></div>
+        <div className="practice-hero-num">Areas of Practice</div>
+        <div className="practice-hero-title">Fourteen disciplines.<br />One firm.</div>
+        <div className="practice-hero-rule"></div>
+        <div className="practice-hero-lead">
+          From a complex personal injury matter to a routine real estate closing, our practice spans the full range of legal services that individuals, families, and closely-held businesses need over the course of a lifetime. Each discipline below is led by an experienced attorney — and, in every matter, the principal who handles your case is the principal you will work with from start to finish.
+        </div>
+      </div>
       <section className="practice">
         <div className="section-header">
           <span className="section-header-label">Areas of Practice</span>

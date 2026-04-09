@@ -12,10 +12,17 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-bg"></div>
-        <div className="hero-seal">
-          <div className="hero-seal-inner">
-            <span className="hero-seal-glyph">VMK</span>
-          </div>
+        <div className="hero-mark">
+          <svg viewBox="0 0 80 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <line x1="0" y1="12" x2="28" y2="12" stroke="#B8972A" strokeOpacity="0.5" strokeWidth="0.6"/>
+            <line x1="52" y1="12" x2="80" y2="12" stroke="#B8972A" strokeOpacity="0.5" strokeWidth="0.6"/>
+            <g transform="translate(40,12)">
+              <rect x="-3" y="-3" width="6" height="6" fill="#B8972A" fillOpacity="0.85" transform="rotate(45)"/>
+              <rect x="-1.2" y="-1.2" width="2.4" height="2.4" fill="#0B1525" transform="rotate(45)"/>
+            </g>
+            <circle cx="32" cy="12" r="0.9" fill="#B8972A" fillOpacity="0.7"/>
+            <circle cx="48" cy="12" r="0.9" fill="#B8972A" fillOpacity="0.7"/>
+          </svg>
         </div>
         <div className="hero-eyebrow">
           <span></span>

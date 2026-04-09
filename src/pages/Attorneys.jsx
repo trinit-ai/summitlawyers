@@ -11,6 +11,15 @@ export default function Attorneys() {
     <>
       <SEO path="/attorneys" title="Our Attorneys" description="Meet the attorneys of Ventura, Miesowitz & Keough, P.C. — partners and counsel serving Summit, NJ and the surrounding region since 1981." />
       <Breadcrumb trail={[{ to: '/', label: 'Home' }, { label: 'Attorneys' }]} />
+      <div className="practice-hero">
+        <div className="practice-hero-bg"></div>
+        <div className="practice-hero-num">Our Attorneys</div>
+        <div className="practice-hero-title">Principals who<br />handle your matter.</div>
+        <div className="practice-hero-rule"></div>
+        <div className="practice-hero-lead">
+          Every case at the firm is handled directly by an experienced attorney — not delegated, not handed off, not assigned to a junior associate. You will know who is responsible for your matter from the first call, and that person will remain responsible from start to finish.
+        </div>
+      </div>
       <section className="attorneys" style={{ paddingTop: 68 }}>
         <div className="section-header">
           <span className="section-header-label" style={{ color: 'var(--gold)' }}>Our Attorneys</span>
