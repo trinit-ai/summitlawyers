@@ -13,15 +13,33 @@ export default function Home() {
       <section className="hero">
         <div className="hero-bg"></div>
         <div className="hero-mark">
-          <svg viewBox="0 0 80 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <line x1="0" y1="12" x2="28" y2="12" stroke="#B8972A" strokeOpacity="0.5" strokeWidth="0.6"/>
-            <line x1="52" y1="12" x2="80" y2="12" stroke="#B8972A" strokeOpacity="0.5" strokeWidth="0.6"/>
-            <g transform="translate(40,12)">
-              <rect x="-3" y="-3" width="6" height="6" fill="#B8972A" fillOpacity="0.85" transform="rotate(45)"/>
-              <rect x="-1.2" y="-1.2" width="2.4" height="2.4" fill="#0B1525" transform="rotate(45)"/>
-            </g>
-            <circle cx="32" cy="12" r="0.9" fill="#B8972A" fillOpacity="0.7"/>
-            <circle cx="48" cy="12" r="0.9" fill="#B8972A" fillOpacity="0.7"/>
+          <svg viewBox="0 0 120 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" stroke="#B8972A" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round">
+            {/* central post */}
+            <line x1="60" y1="14" x2="60" y2="92" strokeOpacity="0.7"/>
+            {/* finial */}
+            <circle cx="60" cy="11" r="2.2" fill="#B8972A" stroke="none" fillOpacity="0.85"/>
+            {/* cross beam */}
+            <line x1="14" y1="22" x2="106" y2="22" strokeOpacity="0.7"/>
+            {/* left chains */}
+            <line x1="20" y1="22" x2="14" y2="42" strokeOpacity="0.45"/>
+            <line x1="32" y1="22" x2="38" y2="42" strokeOpacity="0.45"/>
+            {/* right chains */}
+            <line x1="88" y1="22" x2="82" y2="42" strokeOpacity="0.45"/>
+            <line x1="100" y1="22" x2="106" y2="42" strokeOpacity="0.45"/>
+            {/* left pan */}
+            <path d="M10 42 Q26 56 42 42" strokeOpacity="0.7"/>
+            <line x1="10" y1="42" x2="42" y2="42" strokeOpacity="0.5"/>
+            {/* right pan */}
+            <path d="M78 42 Q94 56 110 42" strokeOpacity="0.7"/>
+            <line x1="78" y1="42" x2="110" y2="42" strokeOpacity="0.5"/>
+            {/* base */}
+            <line x1="44" y1="92" x2="76" y2="92" strokeOpacity="0.7"/>
+            <line x1="40" y1="96" x2="80" y2="96" strokeOpacity="0.55"/>
+            {/* small diamond accents at chain anchors */}
+            <rect x="19" y="21" width="2" height="2" fill="#B8972A" stroke="none" transform="rotate(45 20 22)" fillOpacity="0.7"/>
+            <rect x="31" y="21" width="2" height="2" fill="#B8972A" stroke="none" transform="rotate(45 32 22)" fillOpacity="0.7"/>
+            <rect x="87" y="21" width="2" height="2" fill="#B8972A" stroke="none" transform="rotate(45 88 22)" fillOpacity="0.7"/>
+            <rect x="99" y="21" width="2" height="2" fill="#B8972A" stroke="none" transform="rotate(45 100 22)" fillOpacity="0.7"/>
           </svg>
         </div>
         <div className="hero-eyebrow">

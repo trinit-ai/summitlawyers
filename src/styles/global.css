@@ -347,8 +347,8 @@ ul { list-style: none; }
   pointer-events: none;
 }
 .hero-mark {
-  width: 200px;
-  margin-bottom: 36px;
+  width: 88px;
+  margin-bottom: 32px;
   position: relative;
   z-index: 1;
   display: flex;
