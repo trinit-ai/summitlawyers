@@ -75,6 +75,101 @@ ul { list-style: none; }
 }
 .nav-cta:hover { background: var(--gold-dim); }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.nav-phone {
+  font-family: var(--f-serif);
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.nav-phone:hover { color: var(--gold-lt); }
+.nav-cta-btn {
+  font-family: var(--f-sans);
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  background: var(--gold-dim);
+  border: 1px solid rgba(184,151,42,0.55);
+  color: var(--gold-lt);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-cta-btn:hover { background: rgba(184,151,42,0.32); color: white; }
+
+/* ── MODAL ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11,21,37,0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 24px;
+  overflow-y: auto;
+  animation: modal-fade 0.25s ease;
+}
+@keyframes modal-fade { from { opacity: 0; } to { opacity: 1; } }
+.modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  background: var(--midnight);
+  border: 1px solid var(--rule-light);
+  padding: 56px 56px 48px;
+  animation: modal-rise 0.35s cubic-bezier(.16,1,.3,1);
+}
+.modal-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+  opacity: 0.6;
+}
+@keyframes modal-rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.modal-close {
+  position: absolute;
+  top: 16px; right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: rgba(255,255,255,0.4);
+  cursor: pointer;
+  padding: 4px 12px;
+  line-height: 1;
+  font-family: var(--f-serif);
+  transition: color 0.2s;
+}
+.modal-close:hover { color: var(--gold-lt); }
+.modal-header { margin-bottom: 28px; }
+.modal-header h2 {
+  font-family: var(--f-serif);
+  font-size: 28px;
+  font-weight: 400;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.modal-header p {
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+}
+@media (max-width: 700px) {
+  .modal-overlay { padding: 24px 16px; }
+  .modal-panel { padding: 40px 24px 32px; }
+  .nav-phone { display: none; }
+}
+
 /* ── HAMBURGER + MOBILE MENU ── */
 .nav-burger {
   display: none;
@@ -1367,6 +1462,7 @@ ul { list-style: none; }
   .practice-hero-index { right: 24px; }
   .nav-links { display: none; }
   .nav-cta-desktop { display: none; }
+  .nav-actions { display: none; }
   .nav-burger { display: block; }
   .map-section { padding: 40px 24px; }
   .map-embed { height: 320px; }

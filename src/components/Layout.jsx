@@ -1,11 +1,13 @@
 import { NavLink, Link, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { FIRM } from '../data/firm'
+import ContactModal from './ContactModal'
 
 export function Nav() {
   const [open, setOpen] = useState(false)
+  const [modal, setModal] = useState(false)
   const { pathname } = useLocation()
-  useEffect(() => { setOpen(false) }, [pathname])
+  useEffect(() => { setOpen(false); setModal(false) }, [pathname])
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
@@ -21,7 +23,10 @@ export function Nav() {
           <li><NavLink to="/attorneys">Attorneys</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>
-        <a href={FIRM.phoneHref} className="nav-cta nav-cta-desktop">{FIRM.phone}</a>
+        <div className="nav-actions">
+          <a href={FIRM.phoneHref} className="nav-phone">{FIRM.phone}</a>
+          <button className="nav-cta-btn" onClick={() => setModal(true)}>Free Consultation ↗</button>
+        </div>
         <button
           className={`nav-burger${open ? ' open' : ''}`}
           onClick={() => setOpen(o => !o)}
@@ -37,8 +42,10 @@ export function Nav() {
           <NavLink to="/attorneys">Attorneys</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <a href={FIRM.phoneHref} className="mobile-menu-cta">Call {FIRM.phone}</a>
+          <button className="mobile-menu-cta" style={{ marginTop: 12 }} onClick={() => { setOpen(false); setModal(true) }}>Free Consultation</button>
         </div>
       )}
+      <ContactModal open={modal} onClose={() => setModal(false)} />
     </>
   )
 }
