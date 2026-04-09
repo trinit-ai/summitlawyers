@@ -491,7 +491,7 @@ ul { list-style: none; }
 .atty-monogram img[data-slug="maria-blancato"] { object-position: center 25%; transform: scale(1.1); }
 .atty-monogram img[data-slug="august-ventura"] { object-position: center 20%; transform: scale(1.18); }
 .atty-monogram img[data-slug="daniel-keough"] { object-position: center 22%; transform: scale(1.18); }
-.atty-monogram img[data-slug="john-miesowitz"] { object-position: center 22%; transform: scale(1.18); }
+.atty-monogram img[data-slug="john-miesowitz"] { object-position: center 38%; transform: scale(1.0); }
 .atty-monogram img[data-slug="james-vigliotti"] { object-position: center 25%; transform: scale(1.15); }
 .atty-name {
   font-family: var(--f-serif);
