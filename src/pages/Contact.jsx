@@ -1,4 +1,5 @@
 import { Breadcrumb } from '../components/Layout'
+import ContactForm from '../components/ContactForm'
 import { FIRM } from '../data/firm'
 
 export default function Contact() {
@@ -9,8 +10,8 @@ export default function Contact() {
         <div className="cta-left">
           <div className="eyebrow">Begin the Conversation</div>
           <h2>Your first consultation<br />is always without charge.</h2>
-          <p>We believe the attorney-client relationship begins with listening. Tell us about your matter — we'll tell you honestly what we can do and what to expect. We are available evenings and weekends by appointment, and can come to you if you cannot come to us.</p>
-          <a href={FIRM.phoneHref} className="btn-inv">Call {FIRM.phone} &nbsp;↗</a>
+          <p>We believe the attorney-client relationship begins with listening. Tell us about your matter — we'll tell you honestly what we can do and what to expect.</p>
+          <ContactForm />
         </div>
         <div className="cta-right">
           <div className="contact-item">
