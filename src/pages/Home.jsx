@@ -14,15 +14,14 @@ export default function Home() {
       <section className="hero">
         <div className="hero-bg"></div>
         <div className="hero-mark">
-          <Scale size={56} strokeWidth={1.1} color="#B8972A" />
+          <Scale size={68} strokeWidth={1.1} color="#B8972A" />
         </div>
         <div className="hero-eyebrow">
           <span></span>
           <em>Counselors at Law</em>
           <span></span>
         </div>
-        <div className="hero-name">Ventura, Miesowitz<br />&amp; Keough</div>
-        <div className="hero-pc">P.C.</div>
+        <div className="hero-name">Ventura, Miesowitz<br />&amp; Keough, P.C.</div>
         <div className="hero-divider"><span></span><i></i><span></span></div>
         <div className="hero-tagline">
           Personal Injury &nbsp;·&nbsp; Commercial Litigation &nbsp;·&nbsp; Estate Planning &nbsp;·&nbsp; Real Estate &nbsp;·&nbsp; Family Law

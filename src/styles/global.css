@@ -386,15 +386,6 @@ ul { list-style: none; }
   color: white;
   letter-spacing: 0.035em;
   line-height: 1.08;
-  margin-bottom: 10px;
-  position: relative;
-  z-index: 1;
-}
-.hero-pc {
-  font-family: var(--f-serif);
-  font-size: 13px;
-  color: rgba(255,255,255,0.3);
-  letter-spacing: 0.24em;
   margin-bottom: 36px;
   position: relative;
   z-index: 1;
@@ -416,7 +407,7 @@ ul { list-style: none; }
   color: rgba(212,175,90,0.45);
   position: relative;
   z-index: 1;
-  max-width: 600px;
+  max-width: 880px;
   line-height: 2;
 }
 .hero-est {
