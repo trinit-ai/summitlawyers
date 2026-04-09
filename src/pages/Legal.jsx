@@ -1,5 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom'
 import { Breadcrumb } from '../components/Layout'
+import ClosingCard from '../components/ClosingCard'
 import { FIRM } from '../data/firm'
 
 const PAGES = {
@@ -56,6 +57,7 @@ export default function Legal() {
         <div className="detail-content" style={{ borderRight: 'none' }}>
           <div className="section-label">{page.title}</div>
           {page.body.map((p, i) => <p key={i}>{p}</p>)}
+          <ClosingCard />
         </div>
       </div>
     </>

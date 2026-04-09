@@ -42,9 +42,8 @@ export default function PracticeDetail() {
             </div>
           )}
 
-          <ClosingCard
-            text={detail.closing || `To learn more about how we approach ${area.name.toLowerCase()} matters, please call us at ${FIRM.phone} or email ${FIRM.email}. Initial consultations are without charge.`}
-          />
+          {detail.closing && <p>{detail.closing}</p>}
+          <ClosingCard />
 
           {detail.process && (
             <div className="process">

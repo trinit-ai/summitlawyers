@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { Breadcrumb } from '../components/Layout'
+import ClosingCard from '../components/ClosingCard'
 import { FIRM, ATTORNEYS, getAttorney, getPracticeArea } from '../data/firm'
 
 export default function AttorneyDetail() {
@@ -63,6 +64,7 @@ export default function AttorneyDetail() {
               </ul>
             </div>
           )}
+          <ClosingCard />
         </div>
 
         <aside className="sidebar">

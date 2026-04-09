@@ -1145,58 +1145,32 @@ ul { list-style: none; }
   z-index: 0;
 }
 
-/* ── CLOSING CARD ── */
+/* ── CLOSING ORNAMENT ── */
 .closing-card {
-  margin: 48px 0 12px;
-  padding: 40px 44px;
-  background: linear-gradient(180deg, var(--midnight) 0%, #0d1828 100%);
-  border: 1px solid var(--rule-light);
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-}
-.closing-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
-  opacity: 0.6;
+  margin: 56px 0 8px;
+  padding: 36px 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .closing-card-rule {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 18px;
+  gap: 14px;
 }
-.closing-card-rule span { width: 36px; height: 1px; background: var(--gold); opacity: 0.45; }
-.closing-card-rule i { width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); opacity: 0.7; display: block; }
-.closing-card-label {
-  font-size: 9px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 14px;
-  opacity: 0.85;
+.closing-card-rule span {
+  width: 56px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+  opacity: 0.55;
 }
-.closing-card-text {
-  font-family: var(--f-serif);
-  font-size: 17px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.78);
-  max-width: 620px;
-  margin: 0 auto !important;
-}
-.closing-card-text a {
-  color: var(--gold-lt);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(212,175,90,0.35);
-  transition: border-color 0.2s, color 0.2s;
-}
-.closing-card-text a:hover {
-  color: white;
-  border-bottom-color: var(--gold-lt);
+.closing-card-rule i {
+  width: 7px; height: 7px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  opacity: 0.7;
+  display: block;
 }
 
 .case-types {
