@@ -792,10 +792,15 @@ ul { list-style: none; }
 }
 .footer-address {
   font-size: 10px;
-  color: rgba(255,255,255,0.2);
-  line-height: 1.7;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.9;
   letter-spacing: 0.04em;
+  list-style: none;
+  padding: 0;
 }
+.footer-address li { display: block; }
+.footer-address a { color: inherit; }
+.footer-address span { color: rgba(255,255,255,0.2); }
 .footer-right { text-align: right; }
 .footer-links { display: flex; gap: 24px; margin-bottom: 8px; justify-content: flex-end; }
 .footer-links a {
@@ -1595,6 +1600,28 @@ ul { list-style: none; }
   }
   .band-dot { display: none; }
   .band-item { font-size: 9px; }
+  .footer {
+    flex-direction: column;
+    gap: 28px;
+    align-items: flex-start;
+    padding: 32px 24px;
+  }
+  .footer-logo {
+    font-size: 11px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+  .footer-right {
+    text-align: left;
+    width: 100%;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-bottom: 14px;
+  }
+  .footer-copy { text-align: left; }
   .bio-hero { flex-direction: column; align-items: flex-start; gap: 32px; }
   .sidebar { position: static; }
   .detail-content { border-right: none; border-bottom: 1px solid var(--rule-cream); }

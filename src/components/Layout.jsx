@@ -56,10 +56,12 @@ export function Footer() {
     <footer className="footer">
       <div>
         <div className="footer-logo">{FIRM.name}</div>
-        <div className="footer-address">
-          {FIRM.address.street} &nbsp;·&nbsp; {FIRM.address.city}, {FIRM.address.state} {FIRM.address.zip}<br />
-          {FIRM.phone} Tel. &nbsp;·&nbsp; {FIRM.fax} Fax.
-        </div>
+        <ul className="footer-address">
+          <li>{FIRM.address.street}</li>
+          <li>{FIRM.address.city}, {FIRM.address.state} {FIRM.address.zip}</li>
+          <li><a href={FIRM.phoneHref}>{FIRM.phone}</a> <span>Tel.</span></li>
+          <li>{FIRM.fax} <span>Fax.</span></li>
+        </ul>
       </div>
       <div className="footer-right">
         <div className="footer-links">
