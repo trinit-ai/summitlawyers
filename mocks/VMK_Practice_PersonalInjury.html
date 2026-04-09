@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Injury Litigation — Ventura, Miesowitz & Keough, P.C.</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --midnight: #0B1525;
+    --navy: #142240;
+    --navy-mid: #1E3460;
+    --gold: #B8972A;
+    --gold-lt: #D4AF5A;
+    --gold-dim: rgba(184,151,42,0.18);
+    --cream: #F7F4EE;
+    --white: #FFFFFF;
+    --rule-light: rgba(184,151,42,0.22);
+    --rule-dark: rgba(255,255,255,0.08);
+    --rule-cream: rgba(11,21,37,0.09);
+    --f-serif: Georgia, 'Times New Roman', serif;
+    --f-sans: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--f-sans); background: var(--cream); color: var(--midnight); line-height: 1.6; }
+
+  /* NAV */
+  nav {
+    background: var(--midnight);
+    padding: 0 72px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+    border-bottom: 1px solid var(--rule-light);
+    position: sticky; top: 0; z-index: 100;
+  }
+  .nav-logo { font-family: var(--f-serif); font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-lt); font-weight: 400; text-decoration: none; }
+  .nav-links { display: flex; gap: 40px; list-style: none; }
+  .nav-links a { font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--gold-lt); }
+  .nav-cta { font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; padding: 9px 22px; border: 1px solid rgba(184,151,42,0.45); color: var(--gold-lt); text-decoration: none; }
+
+  /* BREADCRUMB */
+  .breadcrumb { background: var(--navy); padding: 14px 72px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--rule-light); }
+  .breadcrumb a { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(212,175,90,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold-lt); }
+  .breadcrumb-sep { font-size: 10px; color: rgba(255,255,255,0.15); }
+  .breadcrumb-current { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-lt); }
+
+  /* PRACTICE HERO */
+  .practice-hero {
+    background: var(--midnight);
+    padding: 80px 72px 72px;
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid var(--rule-light);
+  }
+  .practice-hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 50% 80% at 100% 50%, rgba(30,52,96,0.4) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .practice-hero-num {
+    font-family: var(--f-serif); font-size: 11px; color: var(--gold);
+    opacity: 0.45; font-style: italic; margin-bottom: 16px; position: relative; z-index: 1;
+  }
+  .practice-hero-title {
+    font-family: var(--f-serif); font-size: clamp(36px, 4vw, 58px);
+    font-weight: 400; color: white; letter-spacing: 0.02em; line-height: 1.1;
+    margin-bottom: 24px; position: relative; z-index: 1; max-width: 700px;
+  }
+  .practice-hero-rule { width: 36px; height: 1px; background: var(--gold); opacity: 0.45; margin-bottom: 24px; position: relative; z-index: 1; }
+  .practice-hero-lead {
+    font-size: 15px; color: rgba(255,255,255,0.48); line-height: 1.8;
+    max-width: 600px; position: relative; z-index: 1;
+  }
+  .practice-hero-index {
+    position: absolute; right: 72px; top: 50%; transform: translateY(-50%);
+    font-family: var(--f-serif); font-size: 120px; color: rgba(255,255,255,0.03);
+    font-weight: 400; pointer-events: none; letter-spacing: -0.02em; line-height: 1;
+    z-index: 0;
+  }
+
+  /* MAIN LAYOUT */
+  .main { display: grid; grid-template-columns: 1fr 340px; align-items: start; }
+
+  /* CONTENT */
+  .content { padding: 64px 72px; background: white; border-right: 1px solid var(--rule-cream); }
+  .section-label { font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; opacity: 0.85; }
+  .content h2 { font-family: var(--f-serif); font-size: 24px; font-weight: 400; color: var(--midnight); margin-bottom: 18px; line-height: 1.3; }
+  .content p { font-size: 14.5px; color: rgba(11,21,37,0.6); line-height: 1.9; margin-bottom: 20px; }
+
+  .case-types {
+    margin: 40px 0;
+    padding: 36px;
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+  }
+  .case-types-label { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; opacity: 0.85; }
+  .case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .case-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 0; border-bottom: 1px solid var(--rule-cream);
+    font-size: 13px; color: rgba(11,21,37,0.65);
+  }
+  .case-item:nth-child(odd) { padding-right: 24px; border-right: 1px solid var(--rule-cream); }
+  .case-item:nth-child(even) { padding-left: 24px; }
+  .case-item:nth-last-child(-n+2) { border-bottom: none; }
+  .case-item::before { content: ''; display: block; width: 4px; height: 4px; background: var(--gold); opacity: 0.45; transform: rotate(45deg); flex-shrink: 0; }
+
+  .process { margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--rule-cream); }
+  .process-steps { display: flex; flex-direction: column; gap: 0; margin-top: 24px; }
+  .process-step { display: flex; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--rule-cream); }
+  .process-step:last-child { border-bottom: none; }
+  .step-num {
+    font-family: var(--f-serif); font-size: 28px; color: var(--gold);
+    opacity: 0.2; font-style: italic; line-height: 1; min-width: 36px; margin-top: 2px;
+  }
+  .step-body {}
+  .step-title { font-family: var(--f-serif); font-size: 16px; color: var(--midnight); margin-bottom: 6px; }
+  .step-desc { font-size: 13px; color: rgba(11,21,37,0.5); line-height: 1.7; }
+
+  /* SIDEBAR */
+  .sidebar { padding: 48px 44px; background: var(--cream); position: sticky; top: 56px; }
+  .sidebar-block { margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid var(--rule-cream); }
+  .sidebar-block:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .sidebar-label { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; opacity: 0.85; }
+  .sidebar-contact-item { margin-bottom: 14px; }
+  .sidebar-contact-label { font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(11,21,37,0.35); margin-bottom: 3px; }
+  .sidebar-contact-val { font-family: var(--f-serif); font-size: 13.5px; color: var(--midnight); }
+  .sidebar-contact-val a { color: var(--navy-mid); text-decoration: none; }
+  .btn-full { display: block; width: 100%; text-align: center; font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; padding: 14px 20px; background: var(--midnight); color: var(--gold-lt); text-decoration: none; border: none; cursor: pointer; font-family: var(--f-sans); margin-bottom: 10px; }
+  .btn-full-outline { display: block; width: 100%; text-align: center; font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; padding: 13px 20px; background: transparent; color: var(--midnight); text-decoration: none; border: 1px solid rgba(11,21,37,0.2); cursor: pointer; font-family: var(--f-sans); }
+
+  /* ATTORNEY CARDS on sidebar */
+  .atty-mini { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule-cream); text-decoration: none; }
+  .atty-mini:last-child { border-bottom: none; }
+  .atty-mini-mono { width: 36px; height: 36px; border-radius: 50%; background: rgba(20,34,64,0.08); border: 0.5px solid rgba(20,34,64,0.12); display: flex; align-items: center; justify-content: center; font-family: var(--f-serif); font-size: 11px; color: var(--navy-mid); font-style: italic; flex-shrink: 0; }
+  .atty-mini-name { font-size: 13px; color: var(--midnight); }
+  .atty-mini-role { font-size: 10px; color: rgba(11,21,37,0.4); letter-spacing: 0.08em; }
+
+  /* ALL PRACTICES */
+  .all-practices { background: var(--midnight); padding: 56px 72px; border-top: 1px solid var(--rule-light); }
+  .all-practices-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); margin-top: 36px; }
+  .ap-item { background: var(--midnight); padding: 22px 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border: none; text-decoration: none; }
+  .ap-item:hover { background: var(--navy); }
+  .ap-item.current { background: var(--navy-mid); }
+  .ap-name { font-family: var(--f-serif); font-size: 14px; color: rgba(255,255,255,0.75); }
+  .ap-arrow { font-size: 10px; color: rgba(255,255,255,0.2); }
+
+  /* FOOTER */
+  footer { background: var(--midnight); border-top: 1px solid var(--rule-light); padding: 28px 72px; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; }
+  .footer-logo { font-family: var(--f-serif); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(212,175,90,0.6); margin-bottom: 6px; }
+  .footer-address { font-size: 10px; color: rgba(255,255,255,0.2); line-height: 1.7; letter-spacing: 0.04em; }
+  .footer-links { display: flex; gap: 24px; margin-bottom: 8px; }
+  .footer-links a { font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.2); text-decoration: none; }
+  .footer-copy { font-size: 10px; color: rgba(255,255,255,0.15); letter-spacing: 0.06em; }
+  .footer-disclaimer { width: 100%; padding-top: 20px; border-top: 1px solid var(--rule-dark); font-size: 10px; color: rgba(255,255,255,0.18); line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="VMK_Concept.html" class="nav-logo">Ventura, Miesowitz &amp; Keough</a>
+  <ul class="nav-links">
+    <li><a href="VMK_Concept.html#about">The Firm</a></li>
+    <li><a href="VMK_Concept.html#practice" class="active">Practice Areas</a></li>
+    <li><a href="VMK_Concept.html#attorneys">Attorneys</a></li>
+    <li><a href="VMK_Concept.html#contact">Contact</a></li>
+  </ul>
+  <a href="tel:9082772410" class="nav-cta">908.277.2410</a>
+</nav>
+
+<div class="breadcrumb">
+  <a href="VMK_Concept.html">Home</a>
+  <span class="breadcrumb-sep">/</span>
+  <a href="VMK_Concept.html#practice">Practice Areas</a>
+  <span class="breadcrumb-sep">/</span>
+  <span class="breadcrumb-current">Personal Injury Litigation</span>
+</div>
+
+<div class="practice-hero">
+  <div class="practice-hero-bg"></div>
+  <div class="practice-hero-index">i</div>
+  <div class="practice-hero-num">Practice Area &nbsp;&middot;&nbsp; i</div>
+  <div class="practice-hero-title">Personal Injury<br>Litigation</div>
+  <div class="practice-hero-rule"></div>
+  <div class="practice-hero-lead">When injury changes everything, you deserve an advocate with the experience and resources to fight for full and fair compensation — and the personal attention of a partner, not an associate.</div>
+</div>
+
+<div class="main">
+  <div class="content">
+    <div class="section-label">Overview</div>
+    <p>Ventura, Miesowitz &amp; Keough, P.C. has represented injured individuals and their families throughout New Jersey for over four decades. Our personal injury practice is built on a straightforward conviction: that every injured person deserves the same quality of legal representation as a major corporation — and that they should receive it from an experienced partner, not a junior associate.</p>
+    <p>Mr. Ventura and his team have litigated hundreds of Personal Injury and Workers' Compensation claims and have recovered substantial awards for injured plaintiffs, including a verdict with a minimum payout of $4,775,000. We handle matters from first consultation through trial and, when necessary, through appeal.</p>
+    <p>Our attorneys are available for home and hospital visits for clients who are unable to travel to our Summit office. All personal injury consultations are provided at no charge.</p>
+
+    <div class="case-types">
+      <div class="case-types-label">Case Types We Handle</div>
+      <div class="case-grid">
+        <div class="case-item">Motor Vehicle Accidents</div>
+        <div class="case-item">Slip &amp; Fall Injuries</div>
+        <div class="case-item">Truck &amp; Commercial Vehicle</div>
+        <div class="case-item">Wrongful Death</div>
+        <div class="case-item">Premises Liability</div>
+        <div class="case-item">Construction Site Accidents</div>
+        <div class="case-item">Dog Bites &amp; Animal Attacks</div>
+        <div class="case-item">Insurance Bad Faith</div>
+        <div class="case-item">Catastrophic Injury</div>
+        <div class="case-item">Workers' Compensation</div>
+      </div>
+    </div>
+
+    <p>We represent clients in courts throughout Union, Morris, Essex, Somerset, Middlesex, and Monmouth Counties, as well as in federal courts when jurisdiction requires. Our office is accessible via Routes 24, 78, and 287 and the Garden State Parkway.</p>
+
+    <div class="process">
+      <div class="section-label">Our Process</div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Free Initial Consultation</div>
+            <div class="step-desc">We meet with you — at our office, your home, or your hospital room — to understand what happened and evaluate your case. There is no charge and no obligation.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Investigation &amp; Demand</div>
+            <div class="step-desc">We gather evidence, retain experts when necessary, and prepare a comprehensive demand that accurately reflects the full extent of your losses — current and future.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Negotiation</div>
+            <div class="step-desc">Most cases resolve before trial. We negotiate from a position of preparation and credibility, so insurers know we are ready to litigate if necessary.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Trial &amp; Appeal</div>
+            <div class="step-desc">When a fair settlement is not possible, our attorneys are experienced trial lawyers prepared to take your case to verdict — and, if required, through the appellate courts.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-label">Free Consultation</div>
+      <div class="sidebar-contact-item">
+        <div class="sidebar-contact-label">Telephone</div>
+        <div class="sidebar-contact-val"><a href="tel:9082772410">908.277.2410</a></div>
+      </div>
+      <div class="sidebar-contact-item" style="margin-bottom:24px;">
+        <div class="sidebar-contact-label">Note</div>
+        <div style="font-size:12px;color:rgba(11,21,37,0.45);line-height:1.7;">Home and hospital visits available for clients unable to travel.</div>
+      </div>
+      <a href="VMK_Concept.html#contact" class="btn-full">Request a Consultation &nbsp;&#8599;</a>
+      <a href="tel:9082772410" class="btn-full-outline">Call 908.277.2410</a>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-label">Attorneys in This Practice</div>
+      <a href="VMK_Bio_MichaelVentura.html" class="atty-mini">
+        <div class="atty-mini-mono">MV</div>
+        <div><div class="atty-mini-name">Michael Ventura</div><div class="atty-mini-role">Founding Partner</div></div>
+      </a>
+      <a href="#" class="atty-mini">
+        <div class="atty-mini-mono">DK</div>
+        <div><div class="atty-mini-name">Daniel G. Keough</div><div class="atty-mini-role">Partner</div></div>
+      </a>
+      <a href="#" class="atty-mini">
+        <div class="atty-mini-mono">SR</div>
+        <div><div class="atty-mini-name">Sean L. Rankin</div><div class="atty-mini-role">Partner</div></div>
+      </a>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-label">Service Area</div>
+      <div style="font-size:12.5px;color:rgba(11,21,37,0.5);line-height:1.85;">
+        Summit · Westfield · Chatham · Madison · Millburn · Livingston · West Orange · Maplewood · Elizabeth · Cranford and throughout Union, Morris, Essex, Somerset, Middlesex, and Monmouth Counties.
+      </div>
+    </div>
+  </aside>
+</div>
+
+<section class="all-practices">
+  <div style="display:flex;align-items:center;gap:20px;">
+    <span style="font-size:9px;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);opacity:0.85;white-space:nowrap;">All Practice Areas</span>
+    <div style="flex:1;height:1px;background:var(--rule-light);"></div>
+  </div>
+  <div class="all-practices-grid">
+    <a href="#" class="ap-item current"><span class="ap-name">Personal Injury Litigation</span><span class="ap-arrow">&#8599;</span></a>
+    <a href="#" class="ap-item"><span class="ap-name">Estate Planning</span><span class="ap-arrow">&#8599;</span></a>
+    <a href="#" class="ap-item"><span class="ap-name">Trust &amp; Estate Administration</span><span class="ap-arrow">&#8599;</span></a>
+    <a href="#" class="ap-item"><span class="ap-name">Estate Litigation</span><span class="ap-arrow">&#8599;</span></a>
+    <a href="#" class="ap-item"><span class="ap-name">Mediation &amp; Arbitration</span><span class="ap-arrow">&#8599;</span></a>
+    <a href="#" class="ap-item"><span class="ap-name">Business Law</span><span class="ap-arrow">&#8599;</span></a>
+    <a href="#" class="ap-item"><span class="ap-name">Commercial Real Estate</span><span class="ap-arrow">&#8599;</span></a>
+    <a href="#" class="ap-item"><span class="ap-name">Residential Real Estate</span><span class="ap-arrow">&#8599;</span></a>
+    <a href="#" class="ap-item"><span class="ap-name">Local Property Tax Appeals</span><span class="ap-arrow">&#8599;</span></a>
+    <a href="#" class="ap-item"><span class="ap-name">Matrimonial &amp; Family Law</span><span class="ap-arrow">&#8599;</span></a>
+    <a href="#" class="ap-item"><span class="ap-name">Elder Law</span><span class="ap-arrow">&#8599;</span></a>
+    <a href="#" class="ap-item"><span class="ap-name">Worker's Compensation</span><span class="ap-arrow">&#8599;</span></a>
+    <a href="#" class="ap-item"><span class="ap-name">Social Security Disability</span><span class="ap-arrow">&#8599;</span></a>
+    <a href="#" class="ap-item"><span class="ap-name">Criminal &amp; Municipal Court Law</span><span class="ap-arrow">&#8599;</span></a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-logo">Ventura, Miesowitz &amp; Keough, P.C.</div>
+    <div class="footer-address">783 Springfield Avenue &nbsp;&middot;&nbsp; Summit, New Jersey 07901-2332<br>908.277.2410 Tel. &nbsp;&middot;&nbsp; 908.277.1374 Fax.</div>
+  </div>
+  <div style="text-align:right;">
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Disclaimer</a>
+      <a href="#">Attorney Advertising</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Ventura, Miesowitz &amp; Keough, P.C. All Rights Reserved.</div>
+  </div>
+  <div class="footer-disclaimer">
+    Attorney Advertising. This website is designed for general information only. The information presented at this site should not be construed to be formal legal advice nor the formation of a lawyer/client relationship. Prior results do not guarantee a similar outcome.
+  </div>
+</footer>
+
+</body>
+</html>

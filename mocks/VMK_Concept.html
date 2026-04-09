@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ventura, Miesowitz & Keough, P.C. — Counselors at Law</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --midnight: #0B1525;
+    --navy: #142240;
+    --navy-mid: #1E3460;
+    --gold: #B8972A;
+    --gold-lt: #D4AF5A;
+    --gold-dim: rgba(184,151,42,0.18);
+    --cream: #F7F4EE;
+    --parchment: #EDE8DC;
+    --white: #FFFFFF;
+    --rule-light: rgba(184,151,42,0.22);
+    --rule-dark: rgba(255,255,255,0.08);
+    --rule-cream: rgba(11,21,37,0.09);
+    --f-serif: Georgia, 'Times New Roman', serif;
+    --f-sans: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--f-sans); background: var(--cream); color: var(--midnight); line-height: 1.6; }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--midnight);
+    padding: 0 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    border-bottom: 1px solid var(--rule-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-logo {
+    font-family: var(--f-serif);
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-lt);
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 9.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.38);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--gold-lt); }
+  .nav-cta {
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 9px 22px;
+    border: 1px solid rgba(184,151,42,0.45);
+    color: var(--gold-lt);
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--gold-dim); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--midnight);
+    padding: 96px 72px 104px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--rule-light);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(30,52,96,0.55) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-seal {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    border: 1px solid var(--rule-light);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-seal-inner {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    border: 1px solid var(--rule-light);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-seal-glyph {
+    font-family: var(--f-serif);
+    font-size: 18px;
+    color: var(--gold);
+    font-style: italic;
+    letter-spacing: 0.05em;
+  }
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+    max-width: 560px;
+    width: 100%;
+  }
+  .hero-eyebrow span { height: 1px; flex: 1; background: var(--rule-light); }
+  .hero-eyebrow em {
+    font-size: 9px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-style: normal;
+    white-space: nowrap;
+    opacity: 0.8;
+  }
+  .hero-name {
+    font-family: var(--f-serif);
+    font-size: clamp(34px, 4.2vw, 62px);
+    font-weight: 400;
+    color: white;
+    letter-spacing: 0.035em;
+    line-height: 1.08;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-pc {
+    font-family: var(--f-serif);
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.24em;
+    margin-bottom: 36px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 26px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-divider span { width: 36px; height: 1px; background: var(--gold); opacity: 0.45; }
+  .hero-divider i { width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); opacity: 0.65; display: block; }
+  .hero-tagline {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(212,175,90,0.45);
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    line-height: 2;
+  }
+  .hero-est {
+    position: absolute;
+    bottom: 24px; right: 72px;
+    font-family: var(--f-serif);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.1);
+    font-style: italic;
+  }
+
+  /* ── LOCATION BAND ── */
+  .band {
+    background: var(--navy);
+    padding: 16px 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    border-bottom: 1px solid var(--rule-light);
+    flex-wrap: wrap;
+  }
+  .band-item {
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(212,175,90,0.55);
+    white-space: nowrap;
+  }
+  .band-dot { width: 3px; height: 3px; background: var(--rule-light); border-radius: 50%; flex-shrink: 0; }
+
+  /* ── INTRO / ABOUT ── */
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--rule-cream);
+  }
+  .intro-left {
+    padding: 68px 72px;
+    border-right: 1px solid var(--rule-cream);
+    background: white;
+  }
+  .intro-right {
+    padding: 68px 72px;
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    opacity: 0.85;
+  }
+  .intro-left h2 {
+    font-family: var(--f-serif);
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1.28;
+    color: var(--midnight);
+    margin-bottom: 22px;
+  }
+  .intro-left p {
+    font-size: 14px;
+    color: rgba(11,21,37,0.55);
+    line-height: 1.85;
+  }
+  .intro-right p {
+    font-size: 14px;
+    color: rgba(11,21,37,0.55);
+    line-height: 1.85;
+    margin-bottom: 28px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 13px 28px;
+    border: 1px solid var(--midnight);
+    cursor: pointer;
+    color: var(--midnight);
+    font-family: var(--f-sans);
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    width: fit-content;
+  }
+  .btn:hover { background: var(--midnight); color: white; }
+
+  /* ── PRACTICE AREAS ── */
+  .practice {
+    background: var(--midnight);
+    padding: 68px 72px;
+    border-top: 1px solid var(--rule-light);
+    border-bottom: 1px solid var(--rule-light);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 44px;
+  }
+  .section-header-label {
+    font-size: 9px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap;
+    opacity: 0.85;
+  }
+  .section-header-rule { flex: 1; height: 1px; background: var(--rule-light); }
+  .practice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .pi {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule-dark);
+    cursor: pointer;
+  }
+  .pi:nth-child(odd)  { padding-right: 56px; border-right: 1px solid var(--rule-dark); }
+  .pi:nth-child(even) { padding-left: 56px; }
+  .pi:nth-last-child(-n+2) { border-bottom: none; }
+  .pi:hover .pi-name { color: var(--gold-lt); }
+  .pi-num {
+    font-family: var(--f-serif);
+    font-size: 10px;
+    color: var(--gold);
+    opacity: 0.45;
+    margin-top: 5px;
+    min-width: 22px;
+    font-style: italic;
+  }
+  .pi-name {
+    font-family: var(--f-serif);
+    font-size: 17px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.25;
+    margin-bottom: 5px;
+    transition: color 0.2s;
+  }
+  .pi-desc {
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.28);
+    line-height: 1.6;
+  }
+
+  /* ── ATTORNEYS / PARTNERS ── */
+  .attorneys {
+    background: white;
+    padding: 68px 72px;
+    border-bottom: 1px solid var(--rule-cream);
+  }
+  .section-header-light { display: flex; align-items: center; gap: 20px; margin-bottom: 44px; }
+  .section-header-light .section-header-label { color: var(--gold); }
+  .section-header-light .section-header-rule { background: var(--rule-cream); }
+
+  .atty-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--rule-cream); }
+  .atty-col { padding: 40px 44px; border-right: 1px solid var(--rule-cream); }
+  .atty-col:last-child { border-right: none; }
+  .atty-col-label {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule-cream);
+  }
+  .atty-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--rule-cream);
+  }
+  .atty-item:last-child { border-bottom: none; }
+  .atty-monogram {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(20,34,64,0.07);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--f-serif);
+    font-size: 12px;
+    color: var(--navy-mid);
+    flex-shrink: 0;
+    font-style: italic;
+    border: 0.5px solid rgba(20,34,64,0.12);
+  }
+  .atty-info {}
+  .atty-name {
+    font-family: var(--f-serif);
+    font-size: 15px;
+    color: var(--midnight);
+    margin-bottom: 2px;
+  }
+  .atty-role {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(11,21,37,0.38);
+  }
+
+  /* ── COMMITMENT / SECOND COPY ── */
+  .commitment {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--rule-cream);
+  }
+  .commitment-left {
+    padding: 68px 72px;
+    background: var(--cream);
+    border-right: 1px solid var(--rule-cream);
+  }
+  .commitment-left h3 {
+    font-family: var(--f-serif);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--midnight);
+    margin-bottom: 20px;
+  }
+  .commitment-left p {
+    font-size: 14px;
+    color: rgba(11,21,37,0.55);
+    line-height: 1.85;
+  }
+  .commitment-right {
+    padding: 68px 72px;
+    background: white;
+  }
+  .service-area-label {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    opacity: 0.85;
+  }
+  .counties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .county {
+    font-size: 11px;
+    padding: 5px 12px;
+    border: 0.5px solid rgba(11,21,37,0.12);
+    color: rgba(11,21,37,0.55);
+    letter-spacing: 0.06em;
+  }
+  .commitment-right p {
+    font-size: 12.5px;
+    color: rgba(11,21,37,0.4);
+    line-height: 1.8;
+    margin-top: 8px;
+  }
+
+  /* ── CTA / CONTACT ── */
+  .cta { display: grid; grid-template-columns: 5fr 4fr; }
+  .cta-left {
+    background: var(--navy);
+    padding: 72px 72px;
+  }
+  .cta-left h2 {
+    font-family: var(--f-serif);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: white;
+    margin-bottom: 20px;
+  }
+  .cta-left p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.85;
+    margin-bottom: 36px;
+    max-width: 460px;
+  }
+  .btn-inv {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 13px 28px;
+    border: 1px solid rgba(184,151,42,0.45);
+    cursor: pointer;
+    color: var(--gold-lt);
+    font-family: var(--f-sans);
+    text-decoration: none;
+    transition: background 0.2s;
+    width: fit-content;
+  }
+  .btn-inv:hover { background: var(--gold-dim); }
+  .cta-right {
+    background: var(--midnight);
+    padding: 72px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-left: 1px solid var(--rule-light);
+  }
+  .contact-item {
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--rule-dark);
+  }
+  .contact-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .ci-label {
+    font-size: 8.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(184,151,42,0.45);
+    margin-bottom: 6px;
+  }
+  .ci-val {
+    font-family: var(--f-serif);
+    font-size: 14px;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.5;
+  }
+  .ci-val a { color: inherit; text-decoration: none; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--midnight);
+    border-top: 1px solid var(--rule-light);
+    padding: 28px 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .footer-left {}
+  .footer-logo {
+    font-family: var(--f-serif);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(212,175,90,0.6);
+    margin-bottom: 6px;
+  }
+  .footer-address {
+    font-size: 10px;
+    color: rgba(255,255,255,0.2);
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+  }
+  .footer-right { text-align: right; }
+  .footer-links { display: flex; gap: 24px; margin-bottom: 8px; justify-content: flex-end; }
+  .footer-links a {
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+    text-decoration: none;
+  }
+  .footer-copy {
+    font-size: 10px;
+    color: rgba(255,255,255,0.15);
+    letter-spacing: 0.06em;
+  }
+  .footer-disclaimer {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule-dark);
+    font-size: 10px;
+    color: rgba(255,255,255,0.18);
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Ventura, Miesowitz &amp; Keough</div>
+  <ul class="nav-links">
+    <li><a href="#about" class="active">The Firm</a></li>
+    <li><a href="#practice">Practice Areas</a></li>
+    <li><a href="#attorneys">Attorneys</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="tel:9082772410" class="nav-cta">908.277.2410</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-seal">
+    <div class="hero-seal-inner">
+      <span class="hero-seal-glyph">VMK</span>
+    </div>
+  </div>
+  <div class="hero-eyebrow">
+    <span></span>
+    <em>Counselors at Law</em>
+    <span></span>
+  </div>
+  <div class="hero-name">Ventura, Miesowitz<br>&amp; Keough</div>
+  <div class="hero-pc">P.C.</div>
+  <div class="hero-divider">
+    <span></span><i></i><span></span>
+  </div>
+  <div class="hero-tagline">
+    Personal Injury &nbsp;&middot;&nbsp; Commercial Litigation &nbsp;&middot;&nbsp; Estate Planning &nbsp;&middot;&nbsp; Real Estate &nbsp;&middot;&nbsp; Family Law
+  </div>
+  <div class="hero-est">Est. 1981</div>
+</section>
+
+<!-- LOCATION BAND -->
+<div class="band">
+  <span class="band-item">Summit, New Jersey</span>
+  <span class="band-dot"></span>
+  <span class="band-item">Union County</span>
+  <span class="band-dot"></span>
+  <span class="band-item">Morris County</span>
+  <span class="band-dot"></span>
+  <span class="band-item">Essex County</span>
+  <span class="band-dot"></span>
+  <span class="band-item">Statewide Practice</span>
+</div>
+
+<!-- INTRO / ABOUT -->
+<section class="intro" id="about">
+  <div class="intro-left">
+    <div class="eyebrow">The Firm</div>
+    <h2>Large firm expertise.<br>Small firm service<br>and care.</h2>
+    <p>Ventura, Miesowitz &amp; Keough, P.C. is comprised of highly experienced attorneys who have successfully represented both individual and corporate clients across a broad spectrum of legal matters. Founded by Michael Ventura in 1981, the firm has grown steadily on a foundation of personal attention and principled counsel.</p>
+  </div>
+  <div class="intro-right">
+    <p>The hallmark of the firm's success is its ability to provide excellent legal representation in both a personalized and cost-effective manner. This is primarily due to the firm's management philosophy and structure, in which the firm's principals deal directly with its clients' legal matters — at every stage, without exception.</p>
+    <a href="#contact" class="btn">Schedule a Free Consultation &nbsp;&#8599;</a>
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section class="practice" id="practice">
+  <div class="section-header">
+    <span class="section-header-label">Areas of Practice</span>
+    <div class="section-header-rule"></div>
+    <span class="section-header-label">Fourteen Disciplines</span>
+  </div>
+  <div class="practice-grid">
+    <div class="pi"><span class="pi-num">i</span><div><div class="pi-name">Personal Injury Litigation</div><div class="pi-desc">Accidents, serious injury, and wrongful death claims</div></div></div>
+    <div class="pi"><span class="pi-num">ii</span><div><div class="pi-name">Estate Planning</div><div class="pi-desc">Wills, trusts, and advance directives for individuals and families</div></div></div>
+    <div class="pi"><span class="pi-num">iii</span><div><div class="pi-name">Trust &amp; Estate Administration</div><div class="pi-desc">Probate, executor representation, and fiduciary counsel</div></div></div>
+    <div class="pi"><span class="pi-num">iv</span><div><div class="pi-name">Estate Litigation</div><div class="pi-desc">Will contests, breach of fiduciary duty, and inheritance disputes</div></div></div>
+    <div class="pi"><span class="pi-num">v</span><div><div class="pi-name">Mediation &amp; Arbitration</div><div class="pi-desc">Alternative dispute resolution across civil and commercial matters</div></div></div>
+    <div class="pi"><span class="pi-num">vi</span><div><div class="pi-name">Business Law</div><div class="pi-desc">Entity formation, governance, contracts, and corporate counsel</div></div></div>
+    <div class="pi"><span class="pi-num">vii</span><div><div class="pi-name">Commercial Real Estate</div><div class="pi-desc">Acquisition, disposition, leasing, and development transactions</div></div></div>
+    <div class="pi"><span class="pi-num">viii</span><div><div class="pi-name">Residential Real Estate</div><div class="pi-desc">Purchase, sale, refinancing, and title matters</div></div></div>
+    <div class="pi"><span class="pi-num">ix</span><div><div class="pi-name">Local Property Tax Appeals</div><div class="pi-desc">Assessment challenges for residential and commercial properties</div></div></div>
+    <div class="pi"><span class="pi-num">x</span><div><div class="pi-name">Matrimonial &amp; Family Law</div><div class="pi-desc">Divorce, custody, support, and equitable distribution</div></div></div>
+    <div class="pi"><span class="pi-num">xi</span><div><div class="pi-name">Elder Law</div><div class="pi-desc">Medicaid planning, guardianship, and senior advocacy</div></div></div>
+    <div class="pi"><span class="pi-num">xii</span><div><div class="pi-name">Worker's Compensation</div><div class="pi-desc">Workplace injury claims and employer defense</div></div></div>
+    <div class="pi"><span class="pi-num">xiii</span><div><div class="pi-name">Social Security Disability</div><div class="pi-desc">SSD applications, appeals, and administrative hearings</div></div></div>
+    <div class="pi"><span class="pi-num">xiv</span><div><div class="pi-name">Criminal &amp; Municipal Court Law</div><div class="pi-desc">DWI, traffic matters, and municipal court representation</div></div></div>
+  </div>
+</section>
+
+<!-- ATTORNEYS -->
+<section class="attorneys" id="attorneys">
+  <div class="section-header-light">
+    <span class="section-header-label">Our Attorneys</span>
+    <div class="section-header-rule" style="flex:1;height:1px;background:var(--rule-cream);"></div>
+  </div>
+  <div class="atty-cols">
+    <div class="atty-col">
+      <div class="atty-col-label">Partners</div>
+      <div class="atty-item">
+        <div class="atty-monogram">MV</div>
+        <div class="atty-info"><div class="atty-name">Michael Ventura</div><div class="atty-role">Founding Partner</div></div>
+      </div>
+      <div class="atty-item">
+        <div class="atty-monogram">JM</div>
+        <div class="atty-info"><div class="atty-name">John J. Miesowitz</div><div class="atty-role">Partner</div></div>
+      </div>
+      <div class="atty-item">
+        <div class="atty-monogram">DK</div>
+        <div class="atty-info"><div class="atty-name">Daniel G. Keough</div><div class="atty-role">Partner</div></div>
+      </div>
+      <div class="atty-item">
+        <div class="atty-monogram">SR</div>
+        <div class="atty-info"><div class="atty-name">Sean L. Rankin</div><div class="atty-role">Partner</div></div>
+      </div>
+      <div class="atty-item">
+        <div class="atty-monogram">MB</div>
+        <div class="atty-info"><div class="atty-name">Maria Blancato</div><div class="atty-role">Partner</div></div>
+      </div>
+      <div class="atty-item">
+        <div class="atty-monogram">AV</div>
+        <div class="atty-info"><div class="atty-name">August M. Ventura</div><div class="atty-role">Partner</div></div>
+      </div>
+    </div>
+    <div class="atty-col">
+      <div class="atty-col-label">Attorneys &amp; Counsel</div>
+      <div class="atty-item">
+        <div class="atty-monogram">LL</div>
+        <div class="atty-info"><div class="atty-name">Laurie K. Levine</div><div class="atty-role">Attorney</div></div>
+      </div>
+      <div class="atty-item">
+        <div class="atty-monogram">JV</div>
+        <div class="atty-info"><div class="atty-name">James A. Vigliotti</div><div class="atty-role">Of Counsel</div></div>
+      </div>
+      <div class="atty-item" style="border-bottom:none;padding-bottom:0;">
+        <div style="width:100%;padding:24px;background:rgba(11,21,37,0.03);border:0.5px solid var(--rule-cream);text-align:center;">
+          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;opacity:0.7;">Free Consultations Available</div>
+          <div style="font-family:var(--f-serif);font-size:22px;color:var(--midnight);letter-spacing:0.05em;">908.277.2410</div>
+          <div style="font-size:10px;color:rgba(11,21,37,0.35);margin-top:6px;letter-spacing:0.06em;">Evening &amp; weekend appointments by arrangement</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMITMENT -->
+<section class="commitment">
+  <div class="commitment-left">
+    <div class="eyebrow">A Commitment to Excellence</div>
+    <h3>Principal-led representation, at every stage of your matter.</h3>
+    <p style="margin-top:4px;">The firm's management philosophy is straightforward: clients work directly with the partners who are responsible for their cases. There is no delegation to junior associates on substantive matters, no hand-offs, and no surprises. You will always know who is handling your case — and why.</p>
+    <p style="margin-top:18px;">We also offer home and hospital visits for clients who are unable to travel, and evening appointments are available by arrangement.</p>
+  </div>
+  <div class="commitment-right">
+    <div class="service-area-label">Serving Communities Across New Jersey</div>
+    <div class="counties">
+      <span class="county">Summit</span>
+      <span class="county">Westfield</span>
+      <span class="county">Chatham</span>
+      <span class="county">Madison</span>
+      <span class="county">Morristown</span>
+      <span class="county">Millburn</span>
+      <span class="county">Short Hills</span>
+      <span class="county">Livingston</span>
+      <span class="county">West Orange</span>
+      <span class="county">Maplewood</span>
+      <span class="county">South Orange</span>
+      <span class="county">Elizabeth</span>
+      <span class="county">Cranford</span>
+      <span class="county">Springfield</span>
+      <span class="county">Berkeley Heights</span>
+      <span class="county">New Providence</span>
+    </div>
+    <p>Union County &middot; Morris County &middot; Somerset County &middot; Essex County &middot; Hunterdon County &middot; Hudson County &middot; Middlesex County &middot; Monmouth County — and throughout the State of New Jersey.</p>
+    <p style="margin-top:14px;">Our office is conveniently accessible via Routes 24, 78, and 287 and the Garden State Parkway.</p>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section class="cta" id="contact">
+  <div class="cta-left">
+    <div class="eyebrow" style="margin-bottom:20px;">Begin the Conversation</div>
+    <h2>Your first consultation<br>is always without charge.</h2>
+    <p>We believe the attorney-client relationship begins with listening. Tell us about your matter — we'll tell you honestly what we can do and what to expect. We are available evenings and weekends by appointment, and can come to you if you cannot come to us.</p>
+    <a href="tel:9082772410" class="btn-inv">Call 908.277.2410 &nbsp;&#8599;</a>
+  </div>
+  <div class="cta-right">
+    <div class="contact-item">
+      <div class="ci-label">Address</div>
+      <div class="ci-val">783 Springfield Avenue<br>Summit, New Jersey 07901</div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-label">Telephone</div>
+      <div class="ci-val"><a href="tel:9082772410">908.277.2410</a></div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-label">Facsimile</div>
+      <div class="ci-val">908.277.1374</div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-label">Office Hours</div>
+      <div class="ci-val">Monday – Friday<br>9:00 a.m. – 5:00 p.m.</div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-label">Evening Appointments</div>
+      <div class="ci-val">Available by arrangement<br><a href="tel:9082772410">908.277.2410</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <div class="footer-logo">Ventura, Miesowitz &amp; Keough, P.C.</div>
+    <div class="footer-address">783 Springfield Avenue &nbsp;&middot;&nbsp; Summit, New Jersey 07901-2332<br>908.277.2410 Tel. &nbsp;&middot;&nbsp; 908.277.1374 Fax.</div>
+  </div>
+  <div class="footer-right">
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Disclaimer</a>
+      <a href="#">Attorney Advertising</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Ventura, Miesowitz &amp; Keough, P.C. All Rights Reserved.</div>
+  </div>
+  <div class="footer-disclaimer">
+    Attorney Advertising. This website is designed for general information only. The information presented at this site should not be construed to be formal legal advice nor the formation of a lawyer/client relationship. Prior results do not guarantee a similar outcome.
+  </div>
+</footer>
+
+</body>
+</html>
