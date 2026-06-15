@@ -1,16 +1,16 @@
 import { useEffect } from 'react'
 import ContactForm from './ContactForm'
+import { getLenis } from '../hooks/useSmoothScroll'
 
 export default function ContactModal({ open, onClose }) {
   useEffect(() => {
     if (!open) return
-    document.body.style.overflow = 'hidden'
-    document.documentElement.style.overflow = 'hidden'
+    const lenis = getLenis()
+    if (lenis) lenis.stop()
     const onKey = (e) => { if (e.key === 'Escape') onClose() }
     document.addEventListener('keydown', onKey)
     return () => {
-      document.body.style.overflow = ''
-      document.documentElement.style.overflow = ''
+      if (lenis) lenis.start()
       document.removeEventListener('keydown', onKey)
     }
   }, [open, onClose])
