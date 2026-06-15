@@ -113,10 +113,10 @@ ul { list-style: none; }
   background: rgba(8,16,28,0.82);
   z-index: 1000;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 40px 24px;
-  overflow-y: auto;
+  overflow-y: hidden;
   opacity: 0;
   animation: modal-overlay-in 0.28s ease-out forwards;
 }
@@ -127,8 +127,9 @@ ul { list-style: none; }
   position: relative;
   width: 100%;
   max-width: 640px;
-  max-height: calc(100svh - 80px);
+  max-height: calc(100dvh - 80px);
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   background: var(--midnight);
   border: 1px solid var(--rule-light);
   padding: 56px 56px 48px;
