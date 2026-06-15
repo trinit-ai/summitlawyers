@@ -5,10 +5,12 @@ export default function ContactModal({ open, onClose }) {
   useEffect(() => {
     if (!open) return
     document.body.style.overflow = 'hidden'
+    document.documentElement.style.overflow = 'hidden'
     const onKey = (e) => { if (e.key === 'Escape') onClose() }
     document.addEventListener('keydown', onKey)
     return () => {
       document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
       document.removeEventListener('keydown', onKey)
     }
   }, [open, onClose])

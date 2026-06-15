@@ -129,6 +129,7 @@ ul { list-style: none; }
   max-width: 640px;
   max-height: calc(100dvh - 80px);
   overflow-y: auto;
+  overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
   background: var(--midnight);
   border: 1px solid var(--rule-light);
