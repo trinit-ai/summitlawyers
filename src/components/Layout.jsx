@@ -1,18 +1,26 @@
-import { NavLink, Link, useLocation } from 'react-router-dom'
+import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { FIRM } from '../data/firm'
 import ContactModal from './ContactModal'
 import { getLenis } from '../hooks/useSmoothScroll'
 
+const isMobile = () => window.innerWidth <= 700
+
 export function Nav() {
   const [open, setOpen] = useState(false)
   const [modal, setModal] = useState(false)
   const { pathname } = useLocation()
+  const navigate = useNavigate()
   useEffect(() => { setOpen(false); setModal(false) }, [pathname])
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [open])
+
+  const openConsultation = () => {
+    if (isMobile()) navigate('/contact')
+    else setModal(true)
+  }
 
   return (
     <>
@@ -26,7 +34,7 @@ export function Nav() {
         </ul>
         <div className="nav-actions">
           <a href={FIRM.phoneHref} className="nav-phone">{FIRM.phone}</a>
-          <button className="nav-cta-btn" onClick={() => setModal(true)}>Free Consultation ↗</button>
+          <button className="nav-cta-btn" onClick={openConsultation}>Free Consultation ↗</button>
         </div>
         <button
           className={`nav-burger${open ? ' open' : ''}`}
@@ -43,7 +51,7 @@ export function Nav() {
           <NavLink to="/attorneys">Attorneys</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <a href={FIRM.phoneHref} className="mobile-menu-cta">Call {FIRM.phone}</a>
-          <button className="mobile-menu-cta" style={{ marginTop: 12 }} onClick={() => { setOpen(false); setModal(true) }}>Free Consultation</button>
+          <Link to="/contact" className="mobile-menu-cta" style={{ marginTop: 12, textAlign: 'center' }}>Free Consultation</Link>
         </div>
       )}
       <ContactModal open={modal} onClose={() => setModal(false)} />
