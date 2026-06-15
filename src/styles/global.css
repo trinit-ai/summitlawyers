@@ -128,7 +128,7 @@ ul { list-style: none; }
   width: 100%;
   max-width: 640px;
   max-height: calc(100dvh - 80px);
-  overflow-y: auto;
+  overflow-y: scroll;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
   background: var(--midnight);
@@ -180,8 +180,8 @@ ul { list-style: none; }
   line-height: 1.7;
 }
 @media (max-width: 700px) {
-  .modal-overlay { padding: 24px 16px; }
-  .modal-panel { padding: 40px 24px 32px; }
+  .modal-overlay { padding: 0; align-items: stretch; }
+  .modal-panel { padding: 48px 20px 32px; max-height: 100dvh; border-left: none; border-right: none; }
   .nav-phone { display: none; }
 }
 
