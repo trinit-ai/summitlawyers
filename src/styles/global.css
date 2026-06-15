@@ -180,8 +180,29 @@ ul { list-style: none; }
   line-height: 1.7;
 }
 @media (max-width: 700px) {
-  .modal-overlay { padding: 0; align-items: stretch; }
-  .modal-panel { padding: 48px 20px 32px; max-height: 100dvh; border-left: none; border-right: none; }
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-start;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .modal-panel {
+    padding: 48px 20px 100px;
+    max-height: none;
+    overflow-y: visible;
+    min-height: 100dvh;
+    border-left: none;
+    border-right: none;
+  }
+  .form-submit {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    border-top: 1px solid var(--rule-light);
+  }
   .nav-phone { display: none; }
 }
 
