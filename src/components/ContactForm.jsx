@@ -119,22 +119,24 @@ ${payload.message}`
         <textarea name="message" rows={compact ? 4 : 6} required></textarea>
       </div>
 
-      <div className="form-field">
-        <label>How Did You Hear About Us?</label>
-        <div className="form-checks">
-          {REFERRAL_SOURCES.map(src => (
-            <label key={src} className="form-check">
-              <input type="radio" name="referral" value={src} />
-              <span>{src}</span>
-            </label>
-          ))}
+      {!compact && (
+        <div className="form-field">
+          <label>How Did You Hear About Us?</label>
+          <div className="form-checks">
+            {REFERRAL_SOURCES.map(src => (
+              <label key={src} className="form-check">
+                <input type="radio" name="referral" value={src} />
+                <span>{src}</span>
+              </label>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       <label className="form-check form-agree">
         <input type="checkbox" name="agree" required />
         <span>
-          I have read and agree to the disclaimer below. The information I provide is not confidential and submitting this form does not create an attorney-client relationship.
+          I have read and agree to the disclaimer. The information I provide is not confidential and submitting this form does not create an attorney-client relationship.
         </span>
       </label>
 
@@ -144,9 +146,11 @@ ${payload.message}`
         {status === 'sending' ? 'Sending…' : 'Send Inquiry ↗'}
       </button>
 
-      <div className="form-disclaimer">
-        The information you obtain at this site is not, nor is it intended to be, legal advice. You should consult an attorney for advice regarding your individual situation. Contacting us does not create an attorney-client relationship. Please do not send any confidential information until such a relationship has been established.
-      </div>
+      {!compact && (
+        <div className="form-disclaimer">
+          The information you obtain at this site is not, nor is it intended to be, legal advice. You should consult an attorney for advice regarding your individual situation. Contacting us does not create an attorney-client relationship. Please do not send any confidential information until such a relationship has been established.
+        </div>
+      )}
     </form>
   )
 }

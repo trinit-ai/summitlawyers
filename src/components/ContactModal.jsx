@@ -24,7 +24,6 @@ export default function ContactModal({ open, onClose }) {
         <div className="modal-header">
           <div className="eyebrow" style={{ marginBottom: 12 }}>Free Consultation</div>
           <h2>Schedule a Consultation</h2>
-          <p>Tell us briefly about your matter — we'll be in touch shortly. There is no charge for an initial consultation.</p>
         </div>
         <ContactForm compact />
       </div>
