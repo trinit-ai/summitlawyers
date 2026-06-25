@@ -299,7 +299,7 @@ export const ATTORNEYS = [
   },
   {
     slug: 'maria-blancato', initials: 'MB', name: 'Maria Blancato',
-    role: 'Partner', tier: 'partner', position: 'Senior Associate',
+    role: 'Partner', tier: 'partner', position: 'Partner',
     department: 'Partners',
     education: [
       'Muhlenberg College, B.A. cum laude 1986 (Accounting & Business Administration)',
