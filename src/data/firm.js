@@ -42,7 +42,6 @@ export const PRACTICE_AREAS = [
   { slug: 'matrimonial-family', name: 'Matrimonial & Family Law', desc: 'Divorce, custody, support, and equitable distribution' },
   { slug: 'elder-law', name: 'Elder Law', desc: 'Medicaid planning, guardianship, and senior advocacy' },
   { slug: 'workers-compensation', name: "Worker's Compensation", desc: 'Workplace injury claims and employer defense' },
-  { slug: 'social-security-disability', name: 'Social Security Disability', desc: 'SSD applications, appeals, and administrative hearings' },
   { slug: 'criminal-municipal', name: 'Criminal & Municipal Court Law', desc: 'DWI, traffic matters, and municipal court representation' },
 ].map((p, i) => ({ ...p, numeral: ROMAN[i] }))
 
@@ -191,17 +190,6 @@ export const PRACTICE_DETAIL = {
     attorneyIds: ['maria-blancato'],
   },
 
-  'social-security-disability': {
-    lead: "Were you forced to stop working because of disabling pain in your back, neck, or shoulders? Has irritable bowel syndrome or Crohn's disease made it difficult to get through the work day? Has depression or anxiety kept you from working? You may be entitled to Social Security Disability benefits — and there is no legal fee unless we obtain benefits for you.",
-    overview: [
-      "Two distinct programs sit under the Social Security disability umbrella, and which one applies to you depends on your work history and your assets. If you have a meaningful work history, you may be entitled to Social Security Disability Insurance, commonly referred to as SSDI. If you have limited assets and little or no work history, you may instead be entitled to Supplemental Security Income, or SSI. Both programs exist for the same reason: to provide a measure of income and access to health benefits for qualified people who can no longer work because of disability.",
-      "The Social Security disability system is an important safety net, but it is not always an easy one to navigate. Applications are detailed, supporting documentation is exacting, and a significant percentage of initial applications are denied — sometimes for procedural reasons that have little to do with the merits of the underlying claim. Having someone in your corner who knows what the system is looking for, and who can build the application accordingly, is one of the most useful things you can do for yourself.",
-      "Maria Blancato handles these applications and appeals personally. She will sit with you, walk you through what is required, gather the medical documentation that needs to be gathered, and present your case in the way it deserves to be presented.",
-    ],
-    closing: "There is no legal fee unless we are successful in obtaining benefits for you. Please call 908.277.2410, ext. 131 or email mblancato@summitlawyers.net to discuss your SSD application.",
-    attorneyIds: ['maria-blancato'],
-  },
-
   'criminal-municipal': {
     lead: "Have you or your teenager been charged with a traffic violation, DWI, simple assault, criminal mischief, or shoplifting? Maria Blancato served as an Assistant Prosecutor in Somerset County for four years, and that prior-prosecutor perspective informs every defense she takes on.",
     overview: [
@@ -306,17 +294,16 @@ export const ATTORNEYS = [
       'Rutgers School of Law – Newark, J.D. 1989',
     ],
     email: 'mblancato@summitlawyers.net',
-    practiceSlugs: ['personal-injury','social-security-disability','workers-compensation','criminal-municipal'],
+    practiceSlugs: ['personal-injury','workers-compensation','criminal-municipal'],
     bio: [
-      "Ms. Blancato has been a part of our firm for over 24 years, starting out a couple of days a week when her children were babies and working up to a full practice. Her areas of practice include personal injury litigation, social security disability applications, workers' compensation claims, municipal court matters and juvenile cases.",
-      "Ms. Blancato served as an Assistant Prosecutor in Somerset County for approximately four years where she had extensive trial experience including 11 jury trials and over 50 bench trials. She served as the supervisor over all juvenile matters in the County. She remains abreast of the current workers compensation as she is a member of the Justice H. Coleman, Jr., New Jersey Workers Compensation Inn of Court.",
+      "Ms. Blancato has been a part of our firm for 30 years. Her areas of practice include personal injury litigation, workers' compensation claims and municipal court matters.",
+      "Ms. Blancato served as an Assistant Prosecutor in Somerset County for approximately four years where she had extensive trial experience including 11 jury trials and over 50 bench trials. She served as the supervisor over all juvenile matters in the County. She remains abreast of the current workers compensation as she is a member of the New Jersey Council on Safety and Health.",
       "She was appointed by the Supreme Court of NJ to the District Fee Arbitration Committee in Union County for 4 years, initially serving as a Panel Member and then as Panel Chair for which she wrote several opinions.",
       "She is committed to her clients by making sure they receive compassion and courtesy as to all aspects of their case. Emails and phone calls are returned in a timely fashion so her clients know they are each her priority. While no outcome is guaranteed, you can be guaranteed Ms. Blancato will work hard for you and give your case her dedicated attention.",
     ],
     bar: [
-      'Justice H. Coleman, Jr., New Jersey Workers Compensation Inn of Court',
       'Former Assistant Prosecutor, Somerset County',
-      'District Fee Arbitration Committee, Union County — Former Panel Chair',
+      'Former District Fee Arbitration Committee, Union County — Former Panel Chair',
     ],
     testimonials: [
       {

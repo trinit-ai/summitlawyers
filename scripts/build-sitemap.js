@@ -11,7 +11,7 @@ const PRACTICE_SLUGS = [
   'personal-injury','estate-planning','trust-estate-administration','estate-litigation',
   'mediation-arbitration','business-law','commercial-real-estate','residential-real-estate',
   'property-tax-appeals','matrimonial-family','elder-law','workers-compensation',
-  'social-security-disability','criminal-municipal',
+  'criminal-municipal',
 ]
 const ATTORNEY_SLUGS = [
   'michael-ventura','john-miesowitz','daniel-keough','sean-rankin',
