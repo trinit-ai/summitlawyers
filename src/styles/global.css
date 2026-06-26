@@ -553,6 +553,9 @@ ul { list-style: none; }
   min-width: 22px;
   font-style: italic;
 }
+.pi-cta .pi-num { font-style: normal; opacity: 0.75; }
+.pi-cta .pi-name { color: var(--gold-lt); }
+.pi-cta:hover .pi-name { color: var(--gold); }
 .pi-name {
   font-family: var(--f-serif);
   font-size: 17px;

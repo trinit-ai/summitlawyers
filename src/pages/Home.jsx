@@ -60,7 +60,7 @@ export default function Home() {
         <div className="section-header">
           <span className="section-header-label">Areas of Practice</span>
           <div className="section-header-rule"></div>
-          <span className="section-header-label">Fourteen Disciplines</span>
+          <span className="section-header-label">Thirteen Disciplines</span>
         </div>
         <div className="practice-grid">
           {PRACTICE_AREAS.map(p => (
@@ -72,6 +72,13 @@ export default function Home() {
               </div>
             </Link>
           ))}
+          <Link to="/contact" className="pi pi-cta">
+            <span className="pi-num">↗</span>
+            <div>
+              <div className="pi-name">Speak With an Attorney</div>
+              <div className="pi-desc">Don't see your matter? Tell us what you're facing — we'll point you in the right direction.</div>
+            </div>
+          </Link>
         </div>
       </section>
 

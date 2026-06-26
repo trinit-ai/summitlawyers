@@ -6,12 +6,12 @@ import { PRACTICE_AREAS } from '../data/firm'
 export default function Practice() {
   return (
     <>
-      <SEO path="/practice" title="Practice Areas" description="Fourteen practice areas — Personal Injury, Estate Planning, Real Estate, Family Law, and more. Ventura, Miesowitz & Keough, P.C., Summit, NJ." />
+      <SEO path="/practice" title="Practice Areas" description="Thirteen practice areas — Personal Injury, Estate Planning, Real Estate, Family Law, and more. Ventura, Miesowitz & Keough, P.C., Summit, NJ." />
       <Breadcrumb trail={[{ to: '/', label: 'Home' }, { label: 'Practice Areas' }]} />
       <div className="practice-hero">
         <div className="practice-hero-bg"></div>
         <div className="practice-hero-num">Areas of Practice</div>
-        <div className="practice-hero-title">Fourteen disciplines.<br />One firm.</div>
+        <div className="practice-hero-title">Thirteen disciplines.<br />One firm.</div>
         <div className="practice-hero-rule"></div>
         <div className="practice-hero-lead">
           From a complex personal injury matter to a routine real estate closing, our practice spans the full range of legal services that individuals, families, and closely-held businesses need over the course of a lifetime. Each discipline below is led by an experienced attorney — and, in every matter, the principal who handles your case is the principal you will work with from start to finish.
@@ -21,7 +21,7 @@ export default function Practice() {
         <div className="section-header">
           <span className="section-header-label">Areas of Practice</span>
           <div className="section-header-rule"></div>
-          <span className="section-header-label">Fourteen Disciplines</span>
+          <span className="section-header-label">Thirteen Disciplines</span>
         </div>
         <div className="practice-grid">
           {PRACTICE_AREAS.map(p => (
@@ -33,6 +33,13 @@ export default function Practice() {
               </div>
             </Link>
           ))}
+          <Link to="/contact" className="pi pi-cta">
+            <span className="pi-num">↗</span>
+            <div>
+              <div className="pi-name">Speak With an Attorney</div>
+              <div className="pi-desc">Don't see your matter? Tell us what you're facing — we'll point you in the right direction.</div>
+            </div>
+          </Link>
         </div>
       </section>
     </>

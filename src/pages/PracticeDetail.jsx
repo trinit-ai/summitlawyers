@@ -134,6 +134,10 @@ export default function PracticeDetail() {
             <span className="ap-name">Don't see your matter? — Speak with an attorney</span>
             <span className="ap-arrow">↗</span>
           </Link>
+          <a href="https://maps.google.com/?q=783+Springfield+Avenue,+Summit,+NJ+07901" target="_blank" rel="noopener noreferrer" className="ap-item ap-item-cta">
+            <span className="ap-name">Visit Our Office — 783 Springfield Ave</span>
+            <span className="ap-arrow">↗</span>
+          </a>
         </div>
       </section>
     </>
