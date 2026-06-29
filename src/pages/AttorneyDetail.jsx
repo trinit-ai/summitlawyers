@@ -76,6 +76,14 @@ export default function AttorneyDetail() {
           <div className="section-label">Biography</div>
           {(attorney.bio || ['Biography forthcoming.']).map((p, i) => <p key={i}>{p}</p>)}
 
+          {attorney.priorExperience && (
+            <div className="bar-memberships">
+              <div className="section-label">Prior Experience</div>
+              <ul className="bar-list">
+                {attorney.priorExperience.map(e => <li key={e}>{e}</li>)}
+              </ul>
+            </div>
+          )}
           {attorney.bar && (
             <div className="bar-memberships">
               <div className="section-label">Bar Memberships &amp; Affiliations</div>

@@ -145,7 +145,7 @@ export const PRACTICE_DETAIL = {
       "Beyond purchases and sales, we represent homeowners in the full range of issues that can arise after closing — defect and non-disclosure disputes, applications for zoning variances, property tax assessment appeals, clearing of liens, options for preventing foreclosure, and defense of homeowners during foreclosure proceedings. Where a problem can be addressed without resorting to court, we look for that path first.",
       "We also represent landlords and tenants alike on lease negotiations, in the kinds of landlord-tenant disputes that crop up in any rental market, and in eviction proceedings when those become unavoidable. Our goal in every matter is the same: to leave our clients better informed, better protected, and better positioned than they would have been on their own.",
     ],
-    attorneyIds: ['daniel-keough','james-vigliotti','sean-rankin'],
+    attorneyIds: ['daniel-keough','james-vigliotti','sean-rankin','august-ventura'],
   },
 
   'property-tax-appeals': {
@@ -331,16 +331,21 @@ export const ATTORNEYS = [
     department: 'Partners',
     education: ['Boston College, B.A. 2008', 'Seton Hall University School of Law, J.D. 2014'],
     email: 'aventura@summitlawyers.net',
-    practiceSlugs: ['personal-injury','matrimonial-family','criminal-municipal'],
+    practiceSlugs: ['personal-injury','residential-real-estate','criminal-municipal','matrimonial-family'],
     bio: [
-      "August M. Ventura received his undergraduate degree from Boston College in 2008, where he double majored in Human Development and English. Following college, Mr. Ventura worked for Ventura, Miesowitz, Keough & Warner as a Personal Injury Paralegal before attending Law School.",
-      "Mr. Ventura received his Juris Doctorate Degree from the Seton Hall University School of Law in May of 2014. Prior to returning to the firm, Mr. Ventura served as a law clerk to the Honorable Bradford M. Bury (J.S.C.) in the Chancery Division - Family Law Part in both Union and Hunterdon Counties. Mr. Ventura has also served two internships with the Union County Prosecutor's Office (Fall of 2008 and Summer of 2012).",
-      "Mr. Ventura handles cases in the firm's Civil, Family and Criminal Litigation practice. Mr. Ventura served as the President of the Summit Bar Association for the 2019-2020 Term.",
+      "Partner August M. Ventura's focus is the firm's Personal Injury practice. He has successfully represented individuals and families from intake to completion in a wide range of personal injury matters, helping clients recover compensation after motor vehicle accidents, trucking collisions, slip and falls, workplace injuries, wrongful death claims, and other cases involving negligence. He has recovered millions of dollars for his injury clients over his ten plus years of practice, emphasizing thorough preparation and strategic advocacy.",
+      "August's greatest strength is the relationship he builds with clients, developing a bond of confidence, support, and peace of mind during this most difficult period of their lives. Every case poses unique challenges in dealing with how a traumatic injury affects every aspect of a person's life — physically, financially, and emotionally. When clients have questions or concerns, they can always count on receiving timely responses, clear explanations, and direct communication from August.",
+      "Whether negotiating a favorable settlement or presenting a case before a jury, August approaches every matter with integrity, preparation, and determination to achieve the best possible financial outcome for his clients.",
+      "In addition to handling cases in the firm's personal injury practice, August handles Real Estate Transactions and cases in the firm's Family and Criminal Litigation practice. August served as the President of the Summit Bar Association for the 2019–2023 Term.",
+    ],
+    priorExperience: [
+      'August worked as a Personal Injury Paralegal prior to attending Law School.',
+      'August served as a law clerk to the Honorable Bradford M. Bury (J.S.C.) in the Chancery Division – Family Law Part in both Union and Hunterdon Counties.',
     ],
     bar: [
       'New Jersey State Bar Association',
       'Union County Bar Association',
-      'Summit Bar Association — Former President (2019–2020)',
+      'Summit Bar Association — Former President (2019–2023)',
       'New Jersey Association for Justice',
     ],
   },
