@@ -68,13 +68,13 @@ export const PRACTICE_DETAIL = {
     lead: "Estate Planning is the process of arranging — during an individual's lifetime — for the distribution of the individual's estate following death, as well as arranging for financial and medical decisions to be made in the event of incapacity.",
     overview: [
       "The process is completed through the design and execution of legal documentation, including a Will (which names the representative of an estate, defines who will receive assets, establishes trusts for creditor protection, and sets directions for asset treatment after death), or a Revocable Living Trust (a will substitute that allows assets to avoid probate, ensures privacy, and avoids state death tax liens).",
-      "Other essential documents include a Health Care Directive — defining who has legal authority to direct healthcare decisions in the event of incapacity; a Power of Attorney — appointing another individual or corporation to handle financial affairs; and Trusts — which establish rules governing how an asset or class of assets will be treated, and can be used to limit estate taxes, safeguard privacy, protect assets from creditors, and provide for beneficiaries with special needs.",
+      "Other essential documents include a Health Care Directive — defining who has legal authority to direct healthcare decisions in the event of incapacity; a Power of Attorney — defining who has legal authority to manage financial affairs in the event of incapacity or when otherwise desired by the principal. Additionally, there are many other types of Trusts (which establish rules governing how an asset or class of assets will be treated) that may be used to limit estate taxes, safeguard privacy, protect assets from creditors, and provide for beneficiaries with special needs.",
       "Estate Planning documentation must be drafted and executed in strict accordance with complex laws and regulations established by the Internal Revenue Service, the New Jersey Division of Taxation, and other state and federal statutes. The laws, regulations, tools, and standards governing Estate Planning are constantly changing.",
       "Our Estate Planning department boasts two attorneys with advanced degrees in taxation (LL.M. in Taxation), who both teach Estate Planning to other professionals. We pride ourselves on keeping abreast of the constantly changing guidelines governing the practice.",
     ],
     closing: "We particularly specialize in coordinating personal Estate Plans with the business succession plans of closely-held business owners, including the creation of succession plans through Buy-Sell Agreements, Corporate Restructuring, and the gifting of non-controlling interests in business.",
     process: [
-      { title: 'Explore Your Goals', desc: "We begin by understanding what matters most — family, business succession, charitable intent, tax minimization." },
+      { title: 'Explore Your Goals', desc: "We begin by understanding what matters most — family harmony, business succession, charitable intent, tax minimization." },
       { title: 'Explain the Framework', desc: 'We walk you through the basic rules and tools relevant to achieving your goals.' },
       { title: 'Craft the Plan', desc: 'We coordinate your goals within the framework of applicable laws and regulations.' },
       { title: 'Draft & Execute', desc: 'We prepare the documentation necessary to memorialize and effectuate your plan.' },
@@ -120,8 +120,8 @@ export const PRACTICE_DETAIL = {
     overview: [
       "While it is simple to form a legal entity for the operation of a business, it is necessary to respect certain formalities in order to gain the benefit of any limited liability. We can assist you in choosing the appropriate form of entity for your intended use and provide guidance on how best to use that entity to minimize your personal liabilities.",
       "Corporations have many more regulatory requirements than LLCs — bylaws, stock issuance, transfer ledgers, annual meetings, corporate taxes, and annual reports. LLCs are only required to file annual reports, but performing certain regulatory functions of a corporation will increase the likelihood that the LLC is treated as a separate entity. We can prepare and maintain the consents, resolutions, operating agreements, and stock ledgers necessary for proper operation.",
-      "Whether a small business is run by a single family or is a broader coalition of business associates, coordinating and planning the fate of the business in the event of the death or incapacity of a principal is essential. The most common tool used in business succession planning is the buy-sell agreement, which allows shareholders/members to negotiate a price (or formula) for the buy-out of a deceased or disabled shareholder's interest, and to allow for continuity of management. We have assisted in the negotiation and preparation of many buy-sell agreements for a vast range of businesses.",
-      "We have experience with mergers — both combining two separate businesses into a single entity, and converting one form of entity into another. We also draft, review, and negotiate contracts of every kind: purchase and sale agreements, waivers, employment agreements, independent contractor agreements, consulting agreements, non-disclosure / non-compete / non-solicitation agreements, profit sharing agreements, and joint venture agreements.",
+      "Whether a small business is run by a single family or is a broader coalition of business associates, coordinating and planning the fate of the business in the event of the death or incapacity of a principal is essential. The most common tool used in business succession planning is the buy-sell agreement, which allows shareholders/members to negotiate a price (or formula) for the buy-out of a deceased or disabled shareholder's interest, and allows for continuity of management. We have assisted in the negotiation and preparation of many buy-sell agreements for a vast range of businesses.",
+      "We have experience with mergers — both combining two separate businesses into a single entity; and converting an entity of one form into another. We also draft, review, and negotiate contracts of every kind: purchase and sale agreements, waivers, employment agreements, independent contractor agreements, consulting agreements, non-disclosure / non-compete / non-solicitation agreements, profit sharing agreements, and joint venture agreements.",
       "We have significant experience with the drafting, review, and negotiation of commercial real estate contracts and leases, and serve as the sole attorneys of commercial landlords and property managers in both New Jersey and New York City.",
     ],
     closing: "If you have questions or require assistance in any of these areas, please contact Sean Rankin at 908.277.2410 or srankin@summitlawyers.net.",
@@ -145,7 +145,7 @@ export const PRACTICE_DETAIL = {
       "Beyond purchases and sales, we represent homeowners in the full range of issues that can arise after closing — defect and non-disclosure disputes, applications for zoning variances, property tax assessment appeals, clearing of liens, options for preventing foreclosure, and defense of homeowners during foreclosure proceedings. Where a problem can be addressed without resorting to court, we look for that path first.",
       "We also represent landlords and tenants alike on lease negotiations, in the kinds of landlord-tenant disputes that crop up in any rental market, and in eviction proceedings when those become unavoidable. Our goal in every matter is the same: to leave our clients better informed, better protected, and better positioned than they would have been on their own.",
     ],
-    attorneyIds: ['daniel-keough','james-vigliotti'],
+    attorneyIds: ['daniel-keough','james-vigliotti','sean-rankin'],
   },
 
   'property-tax-appeals': {
@@ -273,9 +273,9 @@ export const ATTORNEYS = [
       'University of Alabama School of Law, LL.M. in Taxation, magna cum laude 2010',
     ],
     email: 'srankin@summitlawyers.net',
-    practiceSlugs: ['estate-planning','trust-estate-administration','business-law'],
+    practiceSlugs: ['estate-planning','trust-estate-administration','business-law','commercial-real-estate','residential-real-estate'],
     bio: [
-      "Mr. Rankin's practice is focused on transactional legal services. His areas of practice include Estate Administration, Estate Planning, Contracts, and Corporate Law.",
+      "Mr. Rankin's practice is focused on transactional legal services. His areas of practice include Estate Administration, Estate Planning, Contracts, Business Organization, and Real Estate.",
       "Mr. Rankin is a graduate of the University of Pittsburgh (B.A. cum laude 2002); New England School of Law (J.D. 2006); and University of Alabama School of Law (LL.M. in Taxation, magna cum laude, 2010). He is admitted to practice law by New Jersey, New York, and the United States District Court, District of New Jersey.",
       "Recent lectures include: Client Identification and Scope of Representation in Estate Planning and Administration; Administration of the Estate of a Closely Held Business Owner; Who is Responsible for Death Taxes on Non-Probate Assets?; Elections Under I.R.C. Section 6166; Estate Planning in the Shadow of Divorce; Basic Estate Administration; Cancelling LLCs: Counseling Small Business Clients Before and After Insolvency; and Estate Planning 101.",
     ],
