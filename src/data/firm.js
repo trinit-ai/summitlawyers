@@ -74,7 +74,7 @@ export const PRACTICE_DETAIL = {
     ],
     closing: "We particularly specialize in coordinating personal Estate Plans with the business succession plans of closely-held business owners, including the creation of succession plans through Buy-Sell Agreements, Corporate Restructuring, and the gifting of non-controlling interests in business.",
     process: [
-      { title: 'Explore Your Goals', desc: "We begin by understanding what matters most — family harmony, business succession, charitable intent, tax minimization." },
+      { title: 'Explore Your Goals', desc: "We begin by understanding what matters most: family harmony, business succession, charitable intent, tax minimization." },
       { title: 'Explain the Framework', desc: 'We walk you through the basic rules and tools relevant to achieving your goals.' },
       { title: 'Craft the Plan', desc: 'We coordinate your goals within the framework of applicable laws and regulations.' },
       { title: 'Draft & Execute', desc: 'We prepare the documentation necessary to memorialize and effectuate your plan.' },
