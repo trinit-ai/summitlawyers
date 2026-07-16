@@ -4,7 +4,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const SITE = 'https://summitlawyers.vercel.app'
+const SITE = 'https://summitlawyers.net'
 
 // Mirror the routes — kept inline so this script has zero deps on src/
 const PRACTICE_SLUGS = [

@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { FIRM, PRACTICE_AREAS } from '../data/firm'
 
-const SITE_URL = 'https://summitlawyers.vercel.app'
+const SITE_URL = FIRM.siteUrl
 
 const LEGAL_SERVICE_LD = {
   '@context': 'https://schema.org',

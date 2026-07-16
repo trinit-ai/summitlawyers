@@ -25,11 +25,11 @@ export default function AttorneyDetail() {
           name: attorney.name,
           jobTitle: attorney.position || attorney.role,
           email: attorney.email,
-          image: `https://summitlawyers.vercel.app/attorneys/${attorney.slug}.webp`,
+          image: `${FIRM.siteUrl}/attorneys/${attorney.slug}.webp`,
           worksFor: {
             '@type': 'LegalService',
-            name: 'Ventura, Miesowitz & Keough, P.C.',
-            url: 'https://summitlawyers.vercel.app',
+            name: FIRM.name,
+            url: FIRM.siteUrl,
           },
         }}
       />

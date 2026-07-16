@@ -3,6 +3,7 @@
 export const FIRM = {
   name: 'Ventura, Miesowitz & Keough, P.C.',
   shortName: 'Ventura, Miesowitz & Keough',
+  siteUrl: 'https://summitlawyers.net',
   established: 1981,
   phone: '908.277.2410',
   phoneHref: 'tel:9082772410',
