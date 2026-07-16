@@ -48,7 +48,7 @@ export const PRACTICE_AREAS = [
 // Detail content for practice pages — falls back gracefully if missing
 export const PRACTICE_DETAIL = {
   'personal-injury': {
-    lead: "Our team of Personal Injury lawyers offers more than 35 years of experience obtaining substantial recoveries for our clients. If you have been injured due to the negligence or wrongdoing of another, our goal is to provide the highest level of personal service and to achieve the best result possible for you.",
+    lead: "Our team of Personal Injury lawyers offers more than 45 years of experience obtaining substantial recoveries for our clients. If you have been injured due to the negligence or wrongdoing of another, our goal is to provide the highest level of personal service and to achieve the best result possible for you.",
     overview: [
       "With a team of four highly experienced and compassionate lawyers, we work together to diligently pursue all claims for your losses, and to assist you in any way during this traumatic period of your life.",
       "Our team has a broad range of experience in all areas of personal injury claims, including Wrongful Death Actions, Construction Job Site Accidents, Premises Liability Claims, Sidewalk and Parking Lot Slip and Falls, Automobile, Motorcycle and Truck Accidents, Pedestrian Accidents, Elder Abuse and Nursing Home Negligence, Retail Store Slip and Falls, Defective Products Liability, Dog Bites, and Workers' Compensation.",

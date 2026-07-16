@@ -6,3 +6,8 @@ dist
 .env
 .env.local
 .vercel
+
+# Copy-review source documents (not part of the site)
+copy-review.pdf
+copy-review.txt
+*.docx
