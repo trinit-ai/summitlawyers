@@ -24,7 +24,7 @@ export default function Home() {
         <div className="hero-name">Ventura, Miesowitz<br />&amp; Keough, P.C.</div>
         <div className="hero-divider"><span></span><i></i><span></span></div>
         <div className="hero-tagline">
-          Personal Injury &nbsp;·&nbsp; Commercial Litigation &nbsp;·&nbsp; Estate Planning &nbsp;·&nbsp; Real Estate &nbsp;·&nbsp; Family Law
+          Personal Injury &nbsp;·&nbsp; Workers Compensation &nbsp;·&nbsp; Estate Planning &amp; Administration &nbsp;–&nbsp; Corporate Law &nbsp;·&nbsp; Property Tax Appeals &nbsp;–&nbsp; Real Estate &nbsp;·&nbsp; Family Law
         </div>
         <div className="hero-est">Est. {FIRM.established}</div>
       </section>
