@@ -53,8 +53,8 @@ describe('firm data integrity', () => {
     }
   })
 
-  it('there are 14 practice areas', () => {
-    expect(PRACTICE_AREAS.length).toBe(14)
+  it('there are 13 practice areas', () => {
+    expect(PRACTICE_AREAS.length).toBe(13)
   })
 
   it('there are 8 attorneys', () => {
