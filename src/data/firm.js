@@ -41,7 +41,7 @@ export const PRACTICE_AREAS = [
   { slug: 'property-tax-appeals', name: 'Local Property Tax Appeals', desc: 'Assessment challenges for residential and commercial properties' },
   { slug: 'matrimonial-family', name: 'Matrimonial & Family Law', desc: 'Divorce, custody, support, and equitable distribution' },
   { slug: 'elder-law', name: 'Elder Law', desc: 'Medicaid planning, guardianship, and senior advocacy' },
-  { slug: 'workers-compensation', name: "Worker's Compensation", desc: 'Workplace injury claims and employer defense' },
+  { slug: 'workers-compensation', name: "Workers' Compensation", desc: 'Workplace injury claims and employer defense' },
   { slug: 'criminal-municipal', name: 'Criminal & Municipal Court Law', desc: 'DWI, traffic matters, and municipal court representation' },
 ].map((p, i) => ({ ...p, numeral: ROMAN[i] }))
 
@@ -72,7 +72,7 @@ export const PRACTICE_DETAIL = {
       "Estate Planning documentation must be drafted and executed in strict accordance with complex laws and regulations established by the Internal Revenue Service, the New Jersey Division of Taxation, and other state and federal statutes. The laws, regulations, tools, and standards governing Estate Planning are constantly changing.",
       "Our Estate Planning department boasts two attorneys with advanced degrees in taxation (LL.M. in Taxation), who both teach Estate Planning to other professionals. We pride ourselves on keeping abreast of the constantly changing guidelines governing the practice.",
     ],
-    closing: "We particularly specialize in coordinating personal Estate Plans with the business succession plans of closely-held business owners, including the creation of succession plans through Buy-Sell Agreements, Corporate Restructuring, and the gifting of non-controlling interests in business.",
+    closing: "We particularly focus on coordinating personal Estate Plans with the business succession plans of closely-held business owners, including the creation of succession plans through Buy-Sell Agreements, Corporate Restructuring, and the gifting of non-controlling interests in business.",
     process: [
       { title: 'Explore Your Goals', desc: "We begin by understanding what matters most: family harmony, business succession, charitable intent, tax minimization." },
       { title: 'Explain the Framework', desc: 'We walk you through the basic rules and tools relevant to achieving your goals.' },
@@ -149,11 +149,11 @@ export const PRACTICE_DETAIL = {
   },
 
   'property-tax-appeals': {
-    lead: "Dan Keough, Esq. specializes in filing and litigating real estate tax appeals against municipalities, for all types of real estate in New Jersey, on behalf of taxpayers who believe their assessment is too high.",
+    lead: "Daniel Keough, Esq. focuses his practice on filing and litigating real estate tax appeals against municipalities, for all types of real estate in New Jersey, on behalf of taxpayers who believe their assessment is too high.",
     overview: [
       "Mr. Keough handles appeals for residential, commercial, industrial, hotel, multi-family, and other property types. He will analyze the taxpayer's data to determine whether an appeal is warranted — taxes can actually be increased in New Jersey if an appeal is filed on an under-assessed property. The party appealing bears the burden to disprove the assessment, which is presumed correct, by clear and convincing evidence that the assessment is not based on fair market value.",
       "Tax appeals are filed both at the County Tax Boards and the Tax Court of New Jersey, based on certain criteria. There is an annual filing deadline for New Jersey real estate tax appeals as early as January 15 (for Monmouth County properties) and April 1 of the year of appeal (for all other Counties). Municipalities that were either revalued or reassessed may extend their annual deadlines, so filing dates must be checked on a case-by-case basis.",
-      "It is important that a property owner considering a tax appeal seek professional advice from an attorney like Mr. Keough, who specializes in this field of law.",
+      "It is important that a property owner considering a tax appeal seek professional advice from an attorney like Mr. Keough, who concentrates in this field of law.",
     ],
     closing: "Mr. Keough's legal fees are based on a percentage of the tax savings he achieves for the client. If no savings are achieved, no legal fee is due. Hourly and project fees are also available.",
     attorneyIds: ['daniel-keough'],
@@ -173,7 +173,7 @@ export const PRACTICE_DETAIL = {
   'elder-law': {
     lead: "Elder law is the area of practice devoted to the legal, financial, and personal needs of older adults and their families. It is a field that touches retirement planning, medical care, long-term care, estate planning, and the preservation of assets and dignity in later life — and it benefits enormously from being addressed before a crisis arrives, rather than after.",
     overview: [
-      "Elder planning often goes hand-in-hand with traditional estate planning, but it asks somewhat different questions. Attorneys who specialize in elder law help protect a lifetime of accumulated assets while navigating the dense web of government programs and rules that govern eligibility, transfers, and penalties. Our work in this area regularly encompasses matters of Medicare, Social Security, veteran's benefits, and other government benefit programs; powers of attorney for medical and financial decisions; health and personal care planning, including medical care directives, long-term care plans, and end-of-life decisions; insurance questions; quality of life and independence; retirement planning; and the wills, trusts, and estate documents that anchor it all together.",
+      "Elder planning often goes hand-in-hand with traditional estate planning, but it asks somewhat different questions. Attorneys who focus on elder law help protect a lifetime of accumulated assets while navigating the dense web of government programs and rules that govern eligibility, transfers, and penalties. Our work in this area regularly encompasses matters of Medicare, Social Security, veteran's benefits, and other government benefit programs; powers of attorney for medical and financial decisions; health and personal care planning, including medical care directives, long-term care plans, and end-of-life decisions; insurance questions; quality of life and independence; retirement planning; and the wills, trusts, and estate documents that anchor it all together.",
       "Elder law attorneys also handle the difficult subject of elder abuse, which can take both physical and financial forms. Financial abuse — when someone takes advantage of an older person's physical or mental incapacitation to take money or property — is regrettably common and often goes unrecognized until the harm is significant. We help families intervene, recover what can be recovered, and put structures in place to prevent recurrence.",
       "Our strongest recommendation, in nearly every conversation we have on this subject, is the same: it is far better to seek an elder law attorney's services before illness or incapacity becomes an issue. Done in advance, the work is unhurried, considered, and built around your wishes. Done in a crisis, it is none of those things.",
     ],
@@ -181,12 +181,12 @@ export const PRACTICE_DETAIL = {
   },
 
   'workers-compensation': {
-    lead: "Many people who are hurt on the job have no idea what they are entitled to — and that uncertainty is, by itself, one of the reasons claimants leave money and care on the table. There is no legal fee in our Worker's Compensation matters unless we obtain a settlement for you.",
+    lead: "Many people who are hurt on the job have no idea what they are entitled to — and that uncertainty is, by itself, one of the reasons claimants leave money and care on the table. There is no legal fee in our Workers' Compensation matters unless we obtain a settlement for you.",
     overview: [
       "If you are injured at work in New Jersey, your employer is obligated to provide three distinct categories of benefit. The first is temporary disability — wage replacement that kicks in if your injury keeps you out of work for more than three business days. The second is medical treatment, provided with no co-pays and no deductibles charged to you; the only meaningful condition is that you must be treated by the doctors assigned to you by your employer's workers' compensation carrier. The third, and the one most often overlooked, is an award for partial permanent disability — a benefit owed to you if your injury is permanent, even if you return to the same job and continue to work.",
       "Maria Blancato handles these matters personally, from the first phone call through resolution. She will be the only attorney working on your case. Her commitment is twofold: to obtain the best possible result on the merits, and to make sure that you feel informed, comfortable, and respected at every step of a process that is unfamiliar to most people who go through it.",
     ],
-    closing: "I would be honored to discuss your Worker's Compensation claim with you. Please call me directly at 908.277.2410, ext. 131 or email me at mblancato@summitlawyers.net.",
+    closing: "Maria Blancato would be glad to discuss your Workers' Compensation claim with you. Please call her directly at 908.277.2410, ext. 131 or email mblancato@summitlawyers.net.",
     attorneyIds: ['maria-blancato'],
   },
 
@@ -210,7 +210,7 @@ export const ATTORNEYS = [
     email: 'mventura@summitlawyers.net',
     practiceSlugs: ['personal-injury','estate-litigation','workers-compensation','matrimonial-family'],
     bio: [
-      "Michael Ventura is the founding member and managing partner of Ventura, Miesowitz, Keough & Warner, which he established in January of 1981. Mr. Ventura's practice is comprised of diverse areas of Civil Litigation. In recent years, he has received numerous appointments from the Chancery Division to serve as Receiver/Fiscal Agent, to manage and sell businesses and commercial properties in litigation.",
+      "Michael Ventura is the founding member and managing partner of the Firm, which he established in January of 1981 as Ventura, Miesowitz, Keough & Warner. Mr. Ventura's practice is comprised of diverse areas of Civil Litigation. In recent years, he has received numerous appointments from the Chancery Division to serve as Receiver/Fiscal Agent, to manage and sell businesses and commercial properties in litigation.",
       "Over the years, Mr. Ventura and his team have litigated hundreds of Personal Injury and Workers' Compensation claims and have received substantial awards for injured plaintiffs, including an award with a minimum payout of $4,775,000. In addition, he has represented major banks and corporations in complex commercial litigation and served as house counsel to an insurance company for thirteen years, litigating hundreds of insurance defense matters.",
       "In the Chancery Division, Mr. Ventura has handled complex Estate Litigation, Will Contests and Formal Accountings, as well as substantial Matrimonial Actions.",
       "Mr. Ventura is a graduate of Boston College (B.A. 1974) and Seton Hall University School of Law (J.D. 1978). He has served as a member of the Professional Advisory Board for numerous banks, is the founder of two not-for-profit organizations, and has served on the Board of numerous other charitable organizations.",
@@ -233,7 +233,7 @@ export const ATTORNEYS = [
     bio: [
       "\"Jack\" Miesowitz is former Chair of the New Jersey State Bar Association Taxation section, where he twice served as a Chair of its Transfer Taxes Committee and is currently a member of the Executive Council. He is the long-time Co-Moderator of the Institute of Continuing Legal Education Semi-Annual Tax and Estate Planning Forum and also recently designed and presented a seminar on International Estate Planning for ICLE and was the 2012 recipient of ICLE's Distinguished Service Award.",
       "He is an author and frequent lecturer to professional and business groups and civic organizations on Estate Planning and Elder Law. Mr. Miesowitz is a Trustee of the Robert Wood Johnson University Hospital at Rahway Foundation, and has served as a member of the Professional Advisors Council of the University of Medicine and Dentistry of New Jersey as well as the New Jersey Performing Arts Center. He is also a UBS network attorney and a Fellow of the American College of Trust and Estate Counsel.",
-      "Mr. Miesowitz graduated from Trinity College and Seton Hall Law School and has an LL.M. in taxation from New York University. Mr. Miesowitz specializes in designing estate plans for high net worth individuals. He also practices in the areas of Business Planning, Estate Administration, Elder Law, Corporate and Individual Taxation, Charitable Giving, and Planning for Individuals with Disabilities. Mr. Miesowitz has been published in the New Jersey Law Journal and has been a guest on both local and New York radio shows.",
+      "Mr. Miesowitz graduated from Trinity College and Seton Hall Law School and has an LL.M. in taxation from New York University. Mr. Miesowitz focuses his practice on designing estate plans for high net worth individuals. He also practices in the areas of Business Planning, Estate Administration, Elder Law, Corporate and Individual Taxation, Charitable Giving, and Planning for Individuals with Disabilities. Mr. Miesowitz has been published in the New Jersey Law Journal and has been a guest on both local and New York radio shows.",
     ],
     bar: [
       'New Jersey State Bar Association — Taxation Section, former Chair',
@@ -253,7 +253,7 @@ export const ATTORNEYS = [
     email: 'dkeough@summitlawyers.net',
     practiceSlugs: ['property-tax-appeals','commercial-real-estate','residential-real-estate'],
     bio: [
-      "Mr. Keough enjoys a statewide reputation as one of the foremost authorities in the area of Real Estate Tax Appeals, having concentrated more than 90% of his law practice for nearly 42 years in this field. He has represented banks, commercial real estate operators, and developers throughout New Jersey in tax appeals, as well as individuals and corporate clients in many other areas of real estate law, including acquisitions, commercial evictions, leasing, and general litigation.",
+      "Mr. Keough enjoys a statewide reputation in the area of Real Estate Tax Appeals, having concentrated more than 90% of his law practice for nearly 42 years in this field. He has represented banks, commercial real estate operators, and developers throughout New Jersey in tax appeals, as well as individuals and corporate clients in many other areas of real estate law, including acquisitions, commercial evictions, leasing, and general litigation.",
       "Mr. Keough has litigated tax appeals before every County Board of Taxation in New Jersey, and every Judge who has been an active member of the Tax Court of New Jersey, being counsel of record in a number of published judicial decisions. He also handled tax appeals and other real estate matters before the Appellate Division of the Superior Court of New Jersey and the Supreme Court of New Jersey.",
       "Mr. Keough is a graduate of Georgetown University where he obtained his B.A. in 1979. He obtained his law degree from Seton Hall University School of Law (J.D. 1983), and was admitted to the New Jersey Bar that same year.",
     ],
@@ -297,9 +297,9 @@ export const ATTORNEYS = [
     practiceSlugs: ['personal-injury','workers-compensation','criminal-municipal'],
     bio: [
       "Ms. Blancato has been a part of our firm for 30 years. Her areas of practice include personal injury litigation, workers' compensation claims and municipal court matters.",
-      "Ms. Blancato served as an Assistant Prosecutor in Somerset County for approximately four years where she had extensive trial experience including 11 jury trials and over 50 bench trials. She served as the supervisor over all juvenile matters in the County. She remains abreast of the current workers compensation as she is a member of the New Jersey Council on Safety and Health.",
+      "Ms. Blancato served as an Assistant Prosecutor in Somerset County for approximately four years where she had extensive trial experience including 11 jury trials and over 50 bench trials. She served as the supervisor over all juvenile matters in the County. She remains abreast of current workers' compensation law as she is a member of the New Jersey Council on Safety and Health.",
       "She was appointed by the Supreme Court of NJ to the District Fee Arbitration Committee in Union County for 4 years, initially serving as a Panel Member and then as Panel Chair for which she wrote several opinions.",
-      "She is committed to her clients by making sure they receive compassion and courtesy as to all aspects of their case. Emails and phone calls are returned in a timely fashion so her clients know they are each her priority. While no outcome is guaranteed, you can be guaranteed Ms. Blancato will work hard for you and give your case her dedicated attention.",
+      "She is committed to her clients by making sure they receive compassion and courtesy as to all aspects of their case. Emails and phone calls are returned in a timely fashion so her clients know they are each her priority. While no outcome is guaranteed, you can be assured Ms. Blancato will work hard for you and give your case her dedicated attention.",
     ],
     bar: [
       'Former Assistant Prosecutor, Somerset County',
@@ -362,7 +362,7 @@ export const ATTORNEYS = [
     practiceSlugs: ['estate-planning','trust-estate-administration'],
     bio: [
       "Ms. Levine's areas of practice include Estate Planning and Estate Administration. Ms. Levine is a graduate of the State University College at Oneonta (B.S. 1991), Baruch College (M.S. Ed. 1993), and New York Law School (J.D. 1997).",
-      "Prior to joining Ventura, Miesowitz, Keough & Warner, P.C., Ms. Levine was a partner at a law firm in Westbury, Long Island, where she focused on Estate Planning, Estate Administration, Corporate and Tax Planning.",
+      "Prior to joining Ventura, Miesowitz & Keough, P.C., Ms. Levine was a partner at a law firm in Westbury, Long Island, where she focused on Estate Planning, Estate Administration, Corporate and Tax Planning.",
     ],
     bar: [
       'New Jersey State Bar Association',
