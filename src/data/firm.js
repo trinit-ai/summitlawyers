@@ -223,6 +223,29 @@ export const ATTORNEYS = [
       'Summit Bar Association — Former President',
       'Ethics Committee of Union County',
     ],
+    testimonials: [
+      {
+        rating: 5, author: 'George Felix', date: 'May 2026',
+        body: "Michael Ventura is an outstanding attorney and an individual of exceptional character. He has been instrumental in helping my family over the years, from handling legal issues related to our real estate properties to providing stellar representation in various civil cases. His work has been absolutely exemplary, consistently delivering successful outcomes. Beyond his unmatched legal professionalism, he ensures you never feel like just another case file. He operates with such sincere warmth and care that he, along with his wonderful office staff, treats you like family rather than just a client. It is rare to find a legal team so deeply invested in your success. I am deeply grateful for his ongoing guidance and give his practice my highest possible recommendation.",
+      },
+      {
+        rating: 5, author: 'Anonymous', date: 'May 2026',
+        body: "I consulted Michael and his team following my mother's wrongful death, and I could not have asked for better representation during such a difficult time. From the very beginning, Michael was not only extremely knowledgeable and professional, but also genuinely compassionate and dedicated to our case. He made us feel like we mattered and that this was more than just another case to him. Michael and his team invested an incredible amount of time, energy, and effort to ensure that justice was pursued and that our family was supported throughout the entire process. Their attention to detail, communication, and commitment gave us confidence during one of the hardest periods of our lives. I highly recommend Michael and his team to anyone seeking an attorney who truly cares about their clients and will fight tirelessly on their behalf.",
+      },
+      {
+        rating: 5, author: 'Aditya', date: 'April 2026',
+        body: "We are incredibly grateful to Michael Ventura, August Ventura and his entire team for their outstanding representation during one of the most difficult periods our family has faced. Our 9-year-old son suffered a traumatic injury involving a dangerous plastic sword in an incident that also involved bullying by an older boy. What followed was a long and emotionally challenging journey but having this team by our side made all the difference. From day one, they approached our case with compassion, professionalism, and a deep commitment to justice. Over the course of more than three years, they worked tirelessly. Their attention to detail, persistence, and genuine care for our son's well-being were evident throughout. They not only fought hard for a fair outcome but also helped us navigate a very complex and stressful process with confidence. We couldn't have asked for a more dedicated, knowledgeable, and empathetic legal team. We highly recommend Ventura, Miesowitz & Keough to anyone in need of exceptional representation.",
+      },
+      {
+        rating: 5, author: 'Bill', date: 'April 2026',
+        body: "I retained Mike's services based on our interaction and his active involvement in our church community. The case involved my son's serious motor vehicle accident. Mike offered sound advice and helped guide me in communications and interactions with all parties involved. He was accessible and relatable, helping me understand my options and bringing the legalese into laymen's terms. I really felt he took the case to heart. I was very satisfied with Mike's work and the results of the case.",
+      },
+      {
+        rating: 5, author: 'Melissa', date: 'April 2026',
+        body: "Michael and August were amazing at handling my personal injury case due to a car accident! Michael was the only attorney I spoke to that directly spoke to me, as when I met with him I was 20. Both were amazing at communicating and letting me know everything that was going on during the duration of my case! Not only were they supportive during the case, but they helped me find the correct doctors in order to start feeling better! They genuinely care about their client on a personal level and want to ensure that I am happy and healthy long after the case has been concluded!",
+      },
+    ],
+    testimonialsSource: 'https://www.avvo.com/attorneys/07901-nj-michael-ventura-1595735/reviews.html',
   },
   {
     slug: 'john-miesowitz', initials: 'JM', name: 'John J. Miesowitz',
@@ -349,6 +372,17 @@ export const ATTORNEYS = [
       'Summit Bar Association — Former President (2019–2023)',
       'New Jersey Association for Justice',
     ],
+    testimonials: [
+      {
+        rating: 5, author: 'Aditya', date: 'April 2026',
+        body: "We are incredibly grateful to Michael Ventura, August Ventura and his entire team for their outstanding representation during one of the most difficult periods our family has faced. Our 9-year-old son suffered a traumatic injury involving a dangerous plastic sword in an incident that also involved bullying by an older boy. What followed was a long and emotionally challenging journey but having this team by our side made all the difference. From day one, they approached our case with compassion, professionalism, and a deep commitment to justice. Over the course of more than three years, they worked tirelessly. Their attention to detail, persistence, and genuine care for our son's well-being were evident throughout. They not only fought hard for a fair outcome but also helped us navigate a very complex and stressful process with confidence. We couldn't have asked for a more dedicated, knowledgeable, and empathetic legal team. We highly recommend Ventura, Miesowitz & Keough to anyone in need of exceptional representation.",
+      },
+      {
+        rating: 5, author: 'Melissa', date: 'April 2026',
+        body: "Michael and August were amazing at handling my personal injury case due to a car accident! Michael was the only attorney I spoke to that directly spoke to me, as when I met with him I was 20. Both were amazing at communicating and letting me know everything that was going on during the duration of my case! Not only were they supportive during the case, but they helped me find the correct doctors in order to start feeling better! They genuinely care about their client on a personal level and want to ensure that I am happy and healthy long after the case has been concluded!",
+      },
+    ],
+    testimonialsSource: 'https://www.avvo.com/attorneys/07901-nj-michael-ventura-1595735/reviews.html',
   },
   {
     slug: 'laurie-levine', initials: 'LL', name: 'Laurie K. Levine',
