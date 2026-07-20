@@ -1,9 +1,9 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.summitlawyers.net" }],
-      "destination": "https://summitlawyers.net/:path*",
+      "destination": "https://summitlawyers.net/$1",
       "permanent": true
     }
   ],
